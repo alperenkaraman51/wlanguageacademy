@@ -1,71 +1,92 @@
-﻿<!DOCTYPE html><html class="scroll-smooth" lang="tr"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type">
-<title>Nasıl Çalışıyoruz | W Language Academy Bursa</title>
-<meta name="description" content="W Language Academy Bursa Nilüfer - Çocuklar ve gençler için Cambridge sınavları, CEFR uyumlu İngilizce eğitimi ve İngiltere yaz kampları."><link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,700;1,800&family=Baloo+2:wght@600;700;800&display=swap&subset=latin,latin-ext" rel="stylesheet">
-<link rel="icon" type="image/png" href="images/logo-kids.png"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>
-  @layer base {
-    html, body { margin: 0; padding: 0; }
-    body { overscroll-behavior: none; }
-    main > :first-child { margin-top: 0 !important; }
-    main > :last-child { margin-bottom: 0 !important; }
-  }
-  ::-webkit-scrollbar { display: none; }
+﻿<!DOCTYPE html>
+<html class="scroll-smooth" lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Nasıl Çalışıyoruz? | W Language Academy Bursa</title>
+  <meta name="description" content="W Language Academy 4 aşamalı butik eğitim metodolojisi: Birebir seviye tespiti, interaktif yuvarlak masa, Cambridge deneme sınavları ve şeffaf veli takip sistemi.">
+  <link rel="icon" type="image/png" href="assets/images/logo-kids.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,700;1,800&family=Baloo+2:wght@600;700;800&display=swap&subset=latin,latin-ext" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script src="assets/tailwind-config.js"></script>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary selection:text-white">
+<header class="fixed top-0 left-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_14px_34px_-6px_rgba(123,63,228,0.08)] transition-all duration-300">
+  <div class="h-20 max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4">
+    <!-- Brand Logo & Title -->
+    <a href="index.html" class="flex items-center gap-3 group cursor-pointer shrink-0">
+      <div class="h-14 sm:h-16 flex items-center justify-center transition-transform group-hover:scale-105">
+        <img id="main-logo-img" alt="W Language Academy Logo" class="h-12 sm:h-14 w-auto object-contain drop-shadow-sm" src="assets/images/logo-kids.png">
+      </div>
+      <div class="flex flex-col">
+        <span class="font-headline-sm text-lg sm:text-xl font-bold text-primary tracking-tight leading-none group-hover:text-primary-container transition-colors">W Language Academy</span>
+        <span class="text-[11px] sm:text-xs text-secondary font-semibold uppercase tracking-widest mt-0.5">Cambridge English Centre • Nilüfer</span>
+      </div>
+    </a>
 
-  /* Smooth Marquee Animation */
-  @keyframes marquee {
-    0% { transform: translateX(0%); }
-    100% { transform: translateX(-50%); }
-  }
-  .animate-marquee {
-    display: flex;
-    width: max-content;
-    animation: marquee 26s linear infinite;
-  }
-  .animate-marquee:hover {
-    animation-play-state: paused;
-  }
+    <!-- Desktop Navigation -->
+    <nav class="hidden xl:flex items-center gap-1 bg-surface-container-low px-3 py-1.5 rounded-full shadow-[0_2px_8px_rgba(91,31,122,0.04)] whitespace-nowrap">
+      <a class="px-3.5 py-1.5 rounded-full text-sm font-semibold text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all whitespace-nowrap" href="index.html">Anasayfa</a>
+      <a class="px-3.5 py-1.5 rounded-full text-sm font-semibold text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all whitespace-nowrap" href="hakkimizda.html">Hakkımızda</a>
+      <a class="px-3.5 py-1.5 rounded-full text-sm font-semibold text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all whitespace-nowrap" href="programlar.html">Programlar</a>
+      <a class="px-3.5 py-1.5 rounded-full text-sm font-bold bg-primary-container text-on-primary-container shadow-sm transition-all whitespace-nowrap" href="nasil-calisiyoruz.html">Nasıl Çalışıyoruz</a>
+      <a class="px-3.5 py-1.5 rounded-full text-sm font-semibold text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all whitespace-nowrap" href="basarilar.html">Başarılar</a>
+      <a class="px-3.5 py-1.5 rounded-full text-sm font-semibold text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all whitespace-nowrap" href="duyurular.html">Duyurular</a>
+      <a class="px-3.5 py-1.5 rounded-full text-sm font-semibold text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all whitespace-nowrap" href="iletisim.html">İletişim</a>
+      
+    </nav>
 
-  /* Gentle Floating Animation */
-  @keyframes floating {
-    0%, 100% { transform: translateY(0px) rotate(0deg); }
-    50% { transform: translateY(-9px) rotate(1deg); }
-  }
-  .animate-float {
-    animation: floating 4.5s ease-in-out infinite;
-  }
-  .animate-float-delayed {
-    animation: floating 5.2s ease-in-out 1.5s infinite;
-  }
+    <!-- Header Actions -->
+    <div class="flex items-center gap-2 sm:gap-3 shrink-0">
+      <!-- Kids / Pro Mode Pill -->
+      <div class="flex items-center bg-surface-container p-1 rounded-full text-xs font-bold border border-outline-variant/30 select-none shadow-inner">
+        <button id="toggle-kids-btn" onclick="setAcademyMode('kids')" class="px-2.5 sm:px-3 py-1 rounded-full bg-primary text-white transition-all shadow-sm cursor-pointer" type="button">Kids 🐱</button>
+        <button id="toggle-pro-btn" onclick="setAcademyMode('pro')" class="px-2.5 sm:px-3 py-1 rounded-full text-on-surface-variant hover:text-on-surface transition-all cursor-pointer" type="button">Pro 🎓</button>
+      </div>
 
-  /* Subtle pulse glow */
-  @keyframes glow {
-    0%, 100% { opacity: 0.4; transform: scale(1); }
-    50% { opacity: 0.7; transform: scale(1.06); }
-  }
-  .animate-glow {
-    animation: glow 6s ease-in-out infinite;
-  }
+      <!-- Instagram Icon -->
+      <a aria-label="Instagram" class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] text-white flex items-center justify-center shadow-md hover:shadow-lg transition-all hover:scale-110 shrink-0" href="https://www.instagram.com/wlanguageacademy/" rel="noopener noreferrer" target="_blank">
+        <svg class="w-4 h-4 sm:w-5 sm:h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+      </a>
 
-  /* Scroll Reveal State Classes */
-  .reveal-init {
-    opacity: 0;
-    transform: translateY(28px);
-    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-  .reveal-visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
+      <!-- CTA Ön Kayıt Button -->
+      <a class="hidden sm:inline-flex items-center gap-1.5 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full bg-primary hover:bg-inverse-surface text-white text-xs sm:text-sm font-bold shadow-md hover:-translate-y-0.5 transition-all shrink-0 cursor-pointer" href="iletisim.html#on-kayit">
+        <span>Ön Kayıt</span>
+        <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+      </a>
 
-  /* Multiply blend mode helper to eradicate white background borders on mascot illustrations */
-  .mascot-blend {
-    mix-blend-mode: multiply;
-  }
-</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"primary":"#621bcb","on-background":"#300248","on-surface-variant":"#4a4454","surface-tint":"#7334db","secondary":"#80449f","surface":"#fff7fc","surface-bright":"#fff7fc","outline":"#7b7486","on-tertiary":"#ffffff","on-tertiary-fixed-variant":"#6b3b00","on-primary-fixed":"#25005a","tertiary-container":"#985600","on-error-container":"#93000a","surface-container":"#fbe8ff","outline-variant":"#ccc3d7","on-secondary":"#ffffff","on-primary":"#ffffff","on-surface":"#300248","secondary-fixed-dim":"#e8b3ff","on-tertiary-fixed":"#2d1600","secondary-fixed":"#f6d9ff","primary-container":"#7b3fe4","surface-container-low":"#feefff","on-secondary-fixed-variant":"#662b85","inverse-surface":"#471c5f","on-secondary-fixed":"#310049","error-container":"#ffdad6","on-primary-fixed-variant":"#5a06c3","on-error":"#ffffff","tertiary-fixed-dim":"#ffb875","on-tertiary-container":"#ffdfc6","surface-container-lowest":"#ffffff","primary-fixed":"#eaddff","inverse-primary":"#d3bbff","secondary-container":"#df9cfe","surface-container-high":"#f8e0ff","tertiary":"#764100","primary-fixed-dim":"#d3bbff","tertiary-fixed":"#ffdcc0","error":"#ba1a1a","background":"#fff7fc","on-primary-container":"#ede0ff","surface-container-highest":"#f5d9ff","surface-dim":"#f1ceff","surface-variant":"#f5d9ff","on-secondary-container":"#672b86","inverse-on-surface":"#fcebff"},"borderRadius":{"DEFAULT":"1rem","lg":"2rem","xl":"3rem","full":"9999px"},"spacing":{"space-3xl":"4.5rem","space-md":"1rem","gutter-mobile":"1rem","space-lg":"1.5rem","space-xl":"2rem","margin":"3rem","gutter":"1.5rem","space-xs":"0.25rem","space-sm":"0.5rem","margin-mobile":"1.25rem","space-2xl":"3rem"},"fontFamily":{"headline-lg":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"display-hero":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"accent-script-highlight":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"display-hero-mobile":["Plus Jakarta Sans"],"label-lg":["Plus Jakarta Sans"]},"fontSize":{"headline-lg":["40px",{"lineHeight":"48px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-md":["16px",{"lineHeight":"24px","fontWeight":"400"}],"display-hero":["56px",{"lineHeight":"64px","letterSpacing":"-0.03em","fontWeight":"800"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.04em","fontWeight":"700"}],"headline-lg-mobile":["28px",{"lineHeight":"36px","letterSpacing":"-0.01em","fontWeight":"700"}],"headline-md":["28px",{"lineHeight":"36px","fontWeight":"700"}],"accent-script-highlight":["40px",{"lineHeight":"48px","letterSpacing":"0.01em","fontWeight":"700"}],"headline-sm":["22px",{"lineHeight":"30px","fontWeight":"600"}],"body-sm":["14px",{"lineHeight":"20px","fontWeight":"500"}],"body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}],"display-hero-mobile":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"800"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.02em","fontWeight":"700"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary selection:text-white"><header class="fixed top-0 left-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_14px_34px_-6px_rgba(123,63,228,0.08)] transition-all duration-300"><div class="h-20 max-w-[1280px] mx-auto px-margin flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm group cursor-pointer"><div class="p-space-xs bg-surface-container rounded-full flex items-center justify-center transition-transform group-hover:scale-105"><img alt="Logo" class="w-10 h-10 rounded-full object-cover" src="images/logo-kids.png"></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary tracking-tight leading-none group-hover:text-primary-container transition-colors">W Language Academy</span><span class="font-label-md text-label-md text-secondary uppercase tracking-widest">Language School</span></div></div><nav class="hidden xl:flex items-center gap-space-xs bg-surface-container-low px-space-md py-space-xs rounded-full shadow-[0_2px_8px_rgba(91,31,122,0.04)] whitespace-nowrap" data-active-classes="bg-primary-container text-on-primary-container font-label-lg font-bold"><a class="font-label-lg text-label-lg px-space-md py-space-xs rounded-full text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="anasayfa" href="index.html">Hakkımızda</a><a class="font-label-lg text-label-lg px-space-md py-space-xs rounded-full text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="programlar" href="programlar.html">Programlar</a><a class="font-label-lg text-label-lg px-space-md py-space-xs rounded-full text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all whitespace-nowrap" data-path="nasil-calisiyoruz" href="nasil-calisiyoruz.html">Nasıl Çalışıyoruz</a><a class="font-label-lg text-label-lg px-space-md py-space-xs rounded-full text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="basarilar" href="basarilar.html">Başarılar</a><a class="font-label-lg text-label-lg px-space-md py-space-xs rounded-full text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="duyurular" href="duyurular.html">Duyurular</a><a class="font-label-lg text-label-lg px-space-md py-space-xs rounded-full text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="iletisim" href="iletisim.html">İletişim</a></nav><div class="flex items-center gap-space-sm shrink-0"><a aria-label="Instagram" class="w-10 h-10 rounded-full bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] text-white flex items-center justify-center shadow-md hover:shadow-lg transition-all hover:scale-110 hover:-translate-y-0.5 group shrink-0" href="https://www.instagram.com/wlanguageacademy/" rel="noopener noreferrer" target="_blank"><svg class="w-5 h-5 fill-current transition-transform group-hover:scale-105" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg></a><a class="group inline-flex items-center gap-space-xs px-space-lg py-2.5 rounded-full bg-primary hover:bg-inverse-surface text-on-primary font-label-lg whitespace-nowrap shadow-[0_14px_34px_-6px_rgba(123,63,228,0.25)] transition-all hover:-translate-y-0.5 active:translate-y-0 shrink-0 cursor-pointer" data-path="on-kayit" href="index.html#on-kayit"><span class="leading-none">Ön Kayıt</span><span class="material-symbols-outlined bg-tertiary-container text-on-tertiary p-space-xs rounded-full text-[16px] transition-transform group-hover:translate-x-1">arrow_forward</span></a></div></div></header><main class="w-full pt-20 bg-surface min-h-[calc(100vh-80px)]"><div class="flex flex-col w-full">
+      <!-- Mobile Hamburger Button -->
+      <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="xl:hidden w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-surface-container text-primary flex items-center justify-center hover:bg-surface-container-high transition-colors" aria-label="Menüyü Aç" type="button">
+        <span class="material-symbols-outlined text-[22px]">menu</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Drawer Menu -->
+  <div id="mobile-drawer" class="hidden xl:hidden bg-surface/98 backdrop-blur-2xl border-b border-surface-container shadow-2xl px-5 py-4 flex flex-col gap-2 transition-all">
+    <a class="py-2.5 px-3 rounded-xl font-semibold text-sm text-on-surface hover:bg-surface-container transition-colors" href="index.html" onclick="toggleMobileMenu()">Anasayfa</a>
+    <a class="py-2.5 px-3 rounded-xl font-semibold text-sm text-on-surface hover:bg-surface-container transition-colors" href="hakkimizda.html" onclick="toggleMobileMenu()">Hakkımızda</a>
+    <a class="py-2.5 px-3 rounded-xl font-semibold text-sm text-on-surface hover:bg-surface-container transition-colors" href="programlar.html" onclick="toggleMobileMenu()">Programlar</a>
+    <a class="py-2.5 px-3 rounded-xl font-bold text-sm bg-primary-container text-on-primary-container transition-colors" href="nasil-calisiyoruz.html" onclick="toggleMobileMenu()">Nasıl Çalışıyoruz</a>
+    <a class="py-2.5 px-3 rounded-xl font-semibold text-sm text-on-surface hover:bg-surface-container transition-colors" href="basarilar.html" onclick="toggleMobileMenu()">Başarılar</a>
+    <a class="py-2.5 px-3 rounded-xl font-semibold text-sm text-on-surface hover:bg-surface-container transition-colors" href="duyurular.html" onclick="toggleMobileMenu()">Duyurular</a>
+    <a class="py-2.5 px-3 rounded-xl font-semibold text-sm text-on-surface hover:bg-surface-container transition-colors" href="iletisim.html" onclick="toggleMobileMenu()">İletişim</a>
+    
+    <div class="pt-3 border-t border-surface-container flex items-center gap-3">
+      <a class="flex-1 py-2.5 text-center rounded-full bg-primary text-white text-sm font-bold shadow-md" href="iletisim.html#on-kayit" onclick="toggleMobileMenu()">Ön Kayıt Yap</a>
+      <a class="w-10 h-10 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-md shrink-0" href="https://wa.me/905444737693" target="_blank" rel="noopener noreferrer">
+        <span class="material-symbols-outlined text-[20px]">chat</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<main class="w-full pt-20 bg-surface min-h-[calc(100vh-80px)]"><div class="flex flex-col w-full">
 <!-- HERO SECTION -->
 <section class="relative w-full overflow-hidden bg-surface py-space-2xl md:py-space-3xl border-b border-surface-container-high"><div class="pointer-events-none absolute -top-24 right-1/4 h-96 w-96 rounded-full bg-secondary-fixed/40 blur-3xl"></div><div class="pointer-events-none absolute top-1/2 -left-20 h-80 w-80 rounded-full bg-tertiary-fixed/30 blur-3xl"></div><div class="mx-auto max-w-[1280px] px-margin relative z-20 flex flex-col items-center text-center"><nav aria-label="Breadcrumb" class="flex items-center gap-space-xs text-body-sm font-label-md text-on-surface-variant mb-space-md"><a class="hover:text-primary transition-colors" href="hakkimizda.html">Anasayfa</a><span class="material-symbols-outlined text-[16px] text-outline">chevron_right</span><span class="text-on-surface-variant">Metodoloji</span><span class="material-symbols-outlined text-[16px] text-outline">chevron_right</span><span class="text-primary font-bold">Nasıl Çalışıyoruz</span></nav><div class="inline-flex items-center gap-space-xs rounded-full bg-surface-container-high px-space-md py-1.5 shadow-sm mb-space-sm"><span class="inline-flex h-2.5 w-2.5 rounded-full bg-primary-container animate-pulse"></span><span class="font-label-md text-label-md text-primary tracking-wide uppercase">Öğrenci Odaklı Eğitim Metodolojisi • Bursa Nilüfer</span></div><h1 class="font-display-hero text-display-hero text-on-surface mb-space-xs">Nasıl Çalışıyoruz?</h1><p class="font-headline-md text-headline-sm text-primary-container max-w-3xl leading-snug font-bold mb-space-md">Ezber Bozan Yuvarlak Masa Yaklaşımı &amp; 4 Aşamalı Başarı Döngüsü</p><p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed mb-space-xl">W Language Academy'de İngilizce, geleneksel sıralarda ezberletilmez; interaktif masalarda konuşarak, uygulayarak ve uluslararası Cambridge ölçütleriyle takip edilerek hayatın doğal bir parçası haline getirilir.</p><div class="grid grid-cols-2 sm:grid-cols-4 gap-space-sm w-full max-w-4xl"><div class="flex flex-col items-center text-center gap-1 rounded-2xl bg-surface-container-lowest p-space-md shadow-sm transition-transform hover:-translate-y-1"><span class="material-symbols-outlined text-primary-container text-[24px]">groups</span><span class="font-label-lg text-label-lg text-on-surface">4-8 Kişilik</span><span class="font-body-sm text-body-sm text-on-surface-variant">Butik Masalar</span></div><div class="flex flex-col items-center text-center gap-1 rounded-2xl bg-surface-container-lowest p-space-md shadow-sm transition-transform hover:-translate-y-1"><span class="material-symbols-outlined text-tertiary-container text-[24px]">forum</span><span class="font-label-lg text-label-lg text-on-surface">%100 Konuşma</span><span class="font-body-sm text-body-sm text-on-surface-variant">Pratik Odaklı</span></div><div class="flex flex-col items-center text-center gap-1 rounded-2xl bg-surface-container-lowest p-space-md shadow-sm transition-transform hover:-translate-y-1"><span class="material-symbols-outlined text-secondary text-[24px]">analytics</span><span class="font-label-lg text-label-lg text-on-surface">Şeffaf Dijital Karne</span><span class="font-body-sm text-body-sm text-on-surface-variant">Aylık Raporlama</span></div><div class="flex flex-col items-center text-center gap-1 rounded-2xl bg-surface-container-lowest p-space-md shadow-sm transition-transform hover:-translate-y-1"><span class="material-symbols-outlined text-primary text-[24px]">record_voice_over</span><span class="font-label-lg text-label-lg text-on-surface">Native Kulüpler</span><span class="font-body-sm text-body-sm text-on-surface-variant">Speaking Lab</span></div></div><div class="flex flex-wrap items-center justify-center gap-space-md pt-space-xl"><a class="inline-flex items-center gap-space-xs rounded-full bg-primary-container px-space-xl py-3.5 text-on-primary font-label-lg shadow-md transition-all hover:bg-primary hover:-translate-y-0.5" href="#metodoloji-adimlari"><span>4 Aşamalı Döngüyü İnceleyin</span><span class="material-symbols-outlined text-[18px]">south</span></a><a class="inline-flex items-center gap-space-xs rounded-full bg-surface-container px-space-lg py-3.5 text-primary font-label-lg transition-all hover:bg-surface-container-high" href="#seviye-tespiti"><span class="material-symbols-outlined text-[18px]">how_to_reg</span><span>Ücretsiz Tanışma Dersi</span></a></div></div></section>
 <!-- BÖLÜM 1: 4 AŞAMALI ÖĞRENME YOLCULUĞUMUZ -->
@@ -752,35 +773,82 @@
       }
     }
   </script>
-</div></main><footer class="w-full relative bg-inverse-surface text-inverse-on-surface overflow-hidden pt-space-2xl pb-space-xl mt-space-3xl"><div class="absolute top-0 left-0 right-0 h-8 bg-surface rounded-b-[40px]"></div><div class="max-w-[1280px] mx-auto px-margin pt-space-xl"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-2xl pb-space-2xl"><div class="flex flex-col gap-space-md"><div class="flex items-center gap-space-sm"><div class="p-space-xs bg-surface-container-lowest rounded-full inline-flex"><img alt="W Language Academy Logo" class="w-10 h-10 rounded-full object-cover" src="images/logo-kids.png"></div><span class="font-headline-sm text-headline-sm text-inverse-on-surface font-bold">W Language Academy</span></div><p class="font-accent-script-highlight text-body-lg text-secondary-fixed-dim italic leading-snug">Learn · Speak · Grow</p><p class="font-body-sm text-body-sm text-outline-variant">Your Language Partner! Çocuklar ve gençler için yenilikçi, neşeli ve iletişim odaklı dil öğrenme yolculuğu.</p></div><div class="flex flex-col gap-space-md"><span class="font-label-lg text-label-lg text-tertiary-fixed tracking-wider uppercase font-bold">Hızlı Bağlantılar</span><ul class="flex flex-col gap-space-sm"><li class="leading-none"><a class="font-body-sm text-body-sm text-outline-variant hover:text-surface-container-lowest transition-colors" data-path="anasayfa" href="index.html">Hakkımızda</a></li><li class="leading-none"><a class="font-body-sm text-body-sm text-outline-variant hover:text-surface-container-lowest transition-colors" data-path="programlar" href="programlar.html">Programlar</a></li><li class="leading-none"><a class="font-body-sm text-body-sm text-outline-variant hover:text-surface-container-lowest transition-colors" data-path="nasil-calisiyoruz" href="nasil-calisiyoruz.html">Nasıl Çalışıyoruz</a></li><li class="leading-none"><a class="font-body-sm text-body-sm text-outline-variant hover:text-surface-container-lowest transition-colors" data-path="basarilar" href="basarilar.html">Başarı Hikayeleri</a></li><li class="leading-none"><a class="font-body-sm text-body-sm text-outline-variant hover:text-surface-container-lowest transition-colors" data-path="duyurular" href="duyurular.html">Duyurular &amp; Etkinlikler</a></li><li class="leading-none"><a class="font-body-sm text-body-sm text-outline-variant hover:text-surface-container-lowest transition-colors" data-path="iletisim" href="iletisim.html">İletişim</a></li></ul></div><div class="flex flex-col gap-space-md"><span class="font-label-lg text-label-lg text-tertiary-fixed tracking-wider uppercase font-bold">Yasal &amp; Güvenlik</span><ul class="flex flex-col gap-space-sm"><li class="leading-none"><a class="font-body-sm text-body-sm text-outline-variant hover:text-surface-container-lowest transition-colors" data-path="kullanim-kosullari" href="#">Kullanım Koşulları</a></li><li class="leading-none"><a class="font-body-sm text-body-sm text-outline-variant hover:text-surface-container-lowest transition-colors" data-path="gizlilik-ve-aydinlatma-metni" href="#">Gizlilik ve Aydınlatma Metni</a></li><li class="leading-none"><a class="font-body-sm text-body-sm text-outline-variant hover:text-surface-container-lowest transition-colors" data-path="cerez-bildirimi" href="#">Çerez Bildirimi</a></li><li class="leading-none"><a class="font-body-sm text-body-sm text-outline-variant hover:text-surface-container-lowest transition-colors" data-path="acik-riza-metni" href="#">Açık Rıza Metni</a></li></ul></div><div class="flex flex-col gap-space-md"><span class="font-label-lg text-label-lg text-tertiary-fixed tracking-wider uppercase font-bold">Bize Ulaşın</span><p class="font-body-sm text-body-sm text-outline-variant">Sorularınız ve erken kayıt avantajları için hemen bir danışmanımızla görüşün.</p><div class="flex items-center gap-space-sm pt-space-xs"><a aria-label="Instagram" class="w-10 h-10 rounded-full bg-secondary/30 flex items-center justify-center hover:bg-secondary-container hover:text-on-secondary-container transition-all hover:scale-110" href="https://www.instagram.com/wlanguageacademy/" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-[20px]">photo_camera</span></a><a aria-label="E-posta" class="w-10 h-10 rounded-full bg-secondary/30 flex items-center justify-center hover:bg-secondary-container hover:text-on-secondary-container transition-all hover:scale-110" href="mailto:wlanguageacademy@gmail.com"><span class="material-symbols-outlined text-[20px]">mail</span></a><a aria-label="Telefon" class="w-10 h-10 rounded-full bg-secondary/30 flex items-center justify-center hover:bg-secondary-container hover:text-on-secondary-container transition-all hover:scale-110" href="tel:05444737693"><span class="material-symbols-outlined text-[20px]">call</span></a></div></div></div><div class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md"><span class="font-body-sm text-body-sm text-outline-variant text-center md:text-left">© 2026 W Language Academy. Tüm hakları saklıdır.</span><div class="flex items-center gap-space-xs"><span class="font-label-md text-label-md px-space-md py-space-xs bg-surface-container-highest/20 rounded-full text-secondary-fixed">English &amp; Global Languages</span></div></div></div></footer>
-<script>
-  // Scroll reveal with IntersectionObserver
-  document.addEventListener('DOMContentLoaded', () => {
-    const reveals = document.querySelectorAll('.reveal-init');
-    const observer = new IntersectionObserver((entries, obs) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('reveal-visible');
-          obs.unobserve(entry.target);
-        }
-      });
-    }, {
-      root: null,
-      threshold: 0.12,
-      rootMargin: '0px 0px -40px 0px'
-    });
+</div></main>
 
-    reveals.forEach(el => observer.observe(el));
-  });
-</script>
-<aside aria-label="Hızlı İletişim Kanalları" class="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3"><div class="flex items-center gap-space-xs group"><span class="hidden sm:inline-flex items-center px-space-md py-1.5 rounded-full bg-surface-container-lowest/95 backdrop-blur-md shadow-lg text-on-surface font-label-md text-label-md font-bold transition-all duration-300 opacity-90 group-hover:opacity-100 group-hover:scale-105 pointer-events-none border border-surface-container-high">Instagram'da Takip Edin</span><a aria-label="Instagram ile İletişime Geç" class="w-12 h-12 rounded-full flex items-center justify-center shadow-xl transition-all duration-300 hover:scale-110 active:scale-95 text-white bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7]" href="https://www.instagram.com/wlanguageacademy/" rel="noopener noreferrer" target="_blank"><svg class="w-6 h-6 fill-current drop-shadow-sm" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg></a></div><div class="flex items-center gap-space-xs group"><span class="hidden sm:inline-flex items-center px-space-md py-1.5 rounded-full bg-surface-container-lowest/95 backdrop-blur-md shadow-xl text-on-surface font-label-md text-label-md font-bold transition-all duration-300 opacity-90 group-hover:opacity-100 group-hover:scale-105 pointer-events-none border border-surface-container-high"><span class="w-2 h-2 rounded-full bg-[#25D366] mr-2 animate-ping"></span>WhatsApp ile İletişime Geç</span><a aria-label="WhatsApp ile İletişime Geç" class="relative w-14 h-14 rounded-full flex items-center justify-center shadow-2xl transition-all duration-300 hover:scale-110 active:scale-95 bg-[#25D366] text-white" href="https://wa.me/905444737693" rel="noopener noreferrer" target="_blank"><span class="absolute inset-0 rounded-full animate-ping opacity-30 pointer-events-none bg-[#25D366]"></span><svg class="w-8 h-8 fill-current drop-shadow-sm" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.81 13.47 3.81 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.53 7.34C9.36 7.34 9.09 7.4 8.87 7.65C8.64 7.89 8 8.49 8 9.72C8 10.95 8.89 12.14 9.02 12.3C9.14 12.47 10.77 14.97 13.25 16.05C13.84 16.31 14.3 16.46 14.66 16.57C15.26 16.76 15.79 16.74 16.22 16.67C16.7 16.6 17.7 16.07 17.91 15.49C18.12 14.9 18.12 14.4 18.06 14.3C18 14.2 17.84 14.13 17.6 14.02C17.36 13.9 16.17 13.31 15.95 13.23C15.73 13.15 15.57 13.11 15.4 13.35C15.24 13.6 14.76 14.16 14.61 14.33C14.47 14.5 14.32 14.52 14.08 14.4C13.84 14.28 12.87 13.96 11.72 12.93C10.82 12.13 10.22 11.14 10.1 10.93C9.97 10.73 10.08 10.61 10.2 10.49C10.31 10.38 10.45 10.2 10.57 10.06C10.69 9.92 10.73 9.82 10.81 9.66C10.89 9.5 10.85 9.35 10.79 9.23C10.73 9.11 10.24 7.92 10.04 7.43C9.84 6.95 9.64 7.02 9.49 7.02C9.35 7.01 9.53 7.34 9.53 7.34Z"></path></svg></a></div></aside>
+<footer class="w-full relative bg-inverse-surface text-inverse-on-surface overflow-hidden pt-space-2xl pb-space-xl mt-space-3xl">
+  <div class="absolute top-0 left-0 right-0 h-8 bg-surface rounded-b-[40px]"></div>
+  <div class="max-w-[1280px] mx-auto px-margin pt-space-xl">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-2xl pb-space-2xl">
+      <div class="flex flex-col gap-space-md">
+        <div class="flex items-center gap-space-sm">
+          <div class="p-1 bg-surface-container-lowest rounded-full inline-flex">
+            <img alt="W Language Academy Logo" class="w-10 h-10 rounded-full object-contain" src="assets/images/logo-kids.png">
+          </div>
+          <span class="font-headline-sm text-headline-sm text-inverse-on-surface font-bold">W Language Academy</span>
+        </div>
+        <p class="font-accent-script-highlight text-body-lg text-secondary-fixed-dim italic leading-snug">Learn · Speak · Grow</p>
+        <p class="font-body-sm text-body-sm text-outline-variant">Your Language Partner! Çocuklar ve gençler için yenilikçi, neşeli ve iletişim odaklı dil öğrenme yolculuğu.</p>
+      </div>
+      <div class="flex flex-col gap-space-md">
+        <span class="font-label-lg text-label-lg text-tertiary-fixed tracking-wider uppercase font-bold">Hızlı Bağlantılar</span>
+        <ul class="flex flex-col gap-space-sm">
+          <li class="leading-none"><a class="font-body-sm text-body-sm text-outline-variant hover:text-surface-container-lowest transition-colors" href="index.html">Anasayfa</a></li>
+          <li class="leading-none"><a class="font-body-sm text-body-sm text-outline-variant hover:text-surface-container-lowest transition-colors" href="hakkimizda.html">Hakkımızda</a></li>
+          <li class="leading-none"><a class="font-body-sm text-body-sm text-outline-variant hover:text-surface-container-lowest transition-colors" href="programlar.html">Programlar</a></li>
+          <li class="leading-none"><a class="font-body-sm text-body-sm text-outline-variant hover:text-surface-container-lowest transition-colors" href="nasil-calisiyoruz.html">Nasıl Çalışıyoruz</a></li>
+          <li class="leading-none"><a class="font-body-sm text-body-sm text-outline-variant hover:text-surface-container-lowest transition-colors" href="basarilar.html">Başarı Hikayeleri</a></li>
+          <li class="leading-none"><a class="font-body-sm text-body-sm text-outline-variant hover:text-surface-container-lowest transition-colors" href="duyurular.html">Duyurular &amp; Etkinlikler</a></li>
+          <li class="leading-none"><a class="font-body-sm text-body-sm text-outline-variant hover:text-surface-container-lowest transition-colors" href="iletisim.html">İletişim</a></li>
+        </ul>
+      </div>
+      <div class="flex flex-col gap-space-md">
+        <span class="font-label-lg text-label-lg text-tertiary-fixed tracking-wider uppercase font-bold">Yasal &amp; Güvenlik</span>
+        <ul class="flex flex-col gap-space-sm">
+          <li class="leading-none"><a class="font-body-sm text-body-sm text-outline-variant hover:text-surface-container-lowest transition-colors" href="#">Kullanım Koşulları</a></li>
+          <li class="leading-none"><a class="font-body-sm text-body-sm text-outline-variant hover:text-surface-container-lowest transition-colors" href="#">Gizlilik ve Aydınlatma Metni</a></li>
+          <li class="leading-none"><a class="font-body-sm text-body-sm text-outline-variant hover:text-surface-container-lowest transition-colors" href="#">Çerez Bildirimi</a></li>
+          <li class="leading-none"><a class="font-body-sm text-body-sm text-outline-variant hover:text-surface-container-lowest transition-colors" href="#">Açık Rıza Metni</a></li>
+        </ul>
+      </div>
+      <div class="flex flex-col gap-space-md">
+        <span class="font-label-lg text-label-lg text-tertiary-fixed tracking-wider uppercase font-bold">Bize Ulaşın</span>
+        <p class="font-body-sm text-body-sm text-outline-variant">Sorularınız ve erken kayıt avantajları için hemen bir danışmanımızla görüşün.</p>
+        <div class="flex items-center gap-space-sm pt-space-xs">
+          <a aria-label="Instagram" class="w-10 h-10 rounded-full bg-secondary/30 flex items-center justify-center hover:bg-secondary-container hover:text-on-secondary-container transition-all hover:scale-110" href="https://www.instagram.com/wlanguageacademy/" rel="noopener noreferrer" target="_blank">
+            <span class="material-symbols-outlined text-[20px]">photo_camera</span>
+          </a>
+          <a aria-label="E-posta" class="w-10 h-10 rounded-full bg-secondary/30 flex items-center justify-center hover:bg-secondary-container hover:text-on-secondary-container transition-all hover:scale-110" href="mailto:wlanguageacademy@gmail.com">
+            <span class="material-symbols-outlined text-[20px]">mail</span>
+          </a>
+          <a aria-label="Telefon" class="w-10 h-10 rounded-full bg-secondary/30 flex items-center justify-center hover:bg-secondary-container hover:text-on-secondary-container transition-all hover:scale-110" href="tel:05444737693">
+            <span class="material-symbols-outlined text-[20px]">call</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md border-t border-white/10">
+      <span class="font-body-sm text-body-sm text-outline-variant text-center md:text-left">© 2026 W Language Academy. Tüm hakları saklıdır.</span>
+      <div class="flex items-center gap-space-xs">
+        <span class="font-label-md text-label-md px-space-md py-space-xs bg-surface-container-highest/20 rounded-full text-secondary-fixed">English &amp; Global Languages</span>
+      </div>
+    </div>
+  </div>
+</footer>
 
-
-
-
-
-
-
-
-
-</body></html>
+<aside aria-label="Hızlı İletişim Kanalları" class="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">
+  <div class="flex items-center gap-space-xs group">
+    <span class="hidden sm:inline-flex items-center px-space-md py-1.5 rounded-full bg-surface-container-lowest/95 backdrop-blur-md shadow-lg text-on-surface font-label-md text-label-md font-bold transition-all duration-300 opacity-90 group-hover:opacity-100 group-hover:scale-105 pointer-events-none border border-surface-container-high">Instagram'da Takip Edin</span>
+    <a aria-label="Instagram ile İletişime Geç" class="w-12 h-12 rounded-full flex items-center justify-center shadow-xl transition-all duration-300 hover:scale-110 active:scale-95 text-white bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7]" href="https://www.instagram.com/wlanguageacademy/" rel="noopener noreferrer" target="_blank">
+      <svg class="w-6 h-6 fill-current drop-shadow-sm" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+    </a>
+  </div>
+  <div class="flex items-center gap-space-xs group">
+    <span class="hidden sm:inline-flex items-center px-space-md py-1.5 rounded-full bg-surface-container-lowest/95 backdrop-blur-md shadow-xl text-on-surface font-label-md text-label-md font-bold transition-all duration-300 opacity-90 group-hover:opacity-100 group-hover:scale-105 pointer-events-none border border-surface-container-high"><span class="w-2 h-2 rounded-full bg-[#25D366] mr-2 animate-ping"></span>WhatsApp ile İletişime Geç</span>
+    <a aria-label="WhatsApp ile İletişime Geç" class="relative w-14 h-14 rounded-full flex items-center justify-center shadow-2xl transition-all duration-300 hover:scale-110 active:scale-95 bg-[#25D366] text-white" href="https://wa.me/905444737693" rel="noopener noreferrer" target="_blank">
+      <span class="absolute inset-0 rounded-full animate-ping opacity-30 pointer-events-none bg-[#25D366]"></span>
+      <svg class="w-8 h-8 fill-current drop-shadow-sm" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.81 13.47 3.81 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.53 7.34C9.36 7.34 9.09 7.4 8.87 7.65C8.64 7.89 8 8.49 8 9.72C8 10.95 8.89 12.14 9.02 12.3C9.14 12.47 10.77 14.97 13.25 16.05C13.84 16.31 14.3 16.46 14.66 16.57C15.26 16.76 15.79 16.74 16.22 16.67C16.7 16.6 17.7 16.07 17.91 15.49C18.12 14.9 18.12 14.4 18.06 14.3C18 14.2 17.84 14.13 17.6 14.02C17.36 13.9 16.17 13.31 15.95 13.23C15.73 13.15 15.57 13.11 15.4 13.35C15.24 13.6 14.76 14.16 14.61 14.33C14.47 14.5 14.32 14.52 14.08 14.4C13.84 14.28 12.87 13.96 11.72 12.93C10.82 12.13 10.22 11.14 10.1 10.93C9.97 10.73 10.08 10.61 10.2 10.49C10.31 10.38 10.45 10.2 10.57 10.06C10.69 9.92 10.73 9.82 10.81 9.66C10.89 9.5 10.85 9.35 10.79 9.23C10.73 9.11 10.24 7.92 10.04 7.43C9.84 6.95 9.64 7.02 9.49 7.02C9.35 7.01 9.53 7.34 9.53 7.34Z"></path></svg>
+    </a>
+  </div>
+</aside>
+</body>
+</html>

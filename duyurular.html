@@ -1,61 +1,92 @@
 ﻿<!DOCTYPE html>
+<html class="scroll-smooth" lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Duyurular & Akademi Takvimi | W Language Academy Bursa</title>
+  <meta name="description" content="Yeni dönem kayıtları, Cambridge sınav takvimi, Speaking Kulübü etkinlikleri ve İngiltere yaz kampları bülteni.">
+  <link rel="icon" type="image/png" href="assets/images/logo-kids.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,700;1,800&family=Baloo+2:wght@600;700;800&display=swap&subset=latin,latin-ext" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script src="assets/tailwind-config.js"></script>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary selection:text-white">
+<header class="fixed top-0 left-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_14px_34px_-6px_rgba(123,63,228,0.08)] transition-all duration-300">
+  <div class="h-20 max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4">
+    <!-- Brand Logo & Title -->
+    <a href="index.html" class="flex items-center gap-3 group cursor-pointer shrink-0">
+      <div class="h-14 sm:h-16 flex items-center justify-center transition-transform group-hover:scale-105">
+        <img id="main-logo-img" alt="W Language Academy Logo" class="h-12 sm:h-14 w-auto object-contain drop-shadow-sm" src="assets/images/logo-kids.png">
+      </div>
+      <div class="flex flex-col">
+        <span class="font-headline-sm text-lg sm:text-xl font-bold text-primary tracking-tight leading-none group-hover:text-primary-container transition-colors">W Language Academy</span>
+        <span class="text-[11px] sm:text-xs text-secondary font-semibold uppercase tracking-widest mt-0.5">Cambridge English Centre • Nilüfer</span>
+      </div>
+    </a>
 
-<html class="scroll-smooth" lang="tr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>
-  @layer base {
-    html, body { margin: 0; padding: 0; }
-    body { overscroll-behavior: none; }
-    main > :first-child { margin-top: 0 !important; }
-    main > :last-child { margin-bottom: 0 !important; }
-  }
-  ::-webkit-scrollbar { display: none; }
+    <!-- Desktop Navigation -->
+    <nav class="hidden xl:flex items-center gap-1 bg-surface-container-low px-3 py-1.5 rounded-full shadow-[0_2px_8px_rgba(91,31,122,0.04)] whitespace-nowrap">
+      <a class="px-3.5 py-1.5 rounded-full text-sm font-semibold text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all whitespace-nowrap" href="index.html">Anasayfa</a>
+      <a class="px-3.5 py-1.5 rounded-full text-sm font-semibold text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all whitespace-nowrap" href="hakkimizda.html">Hakkımızda</a>
+      <a class="px-3.5 py-1.5 rounded-full text-sm font-semibold text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all whitespace-nowrap" href="programlar.html">Programlar</a>
+      <a class="px-3.5 py-1.5 rounded-full text-sm font-semibold text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all whitespace-nowrap" href="nasil-calisiyoruz.html">Nasıl Çalışıyoruz</a>
+      <a class="px-3.5 py-1.5 rounded-full text-sm font-semibold text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all whitespace-nowrap" href="basarilar.html">Başarılar</a>
+      <a class="px-3.5 py-1.5 rounded-full text-sm font-bold bg-primary-container text-on-primary-container shadow-sm transition-all whitespace-nowrap" href="duyurular.html">Duyurular</a>
+      <a class="px-3.5 py-1.5 rounded-full text-sm font-semibold text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all whitespace-nowrap" href="iletisim.html">İletişim</a>
+      
+    </nav>
 
-  @keyframes marquee {
-    0% { transform: translateX(0%); }
-    100% { transform: translateX(-50%); }
-  }
-  .animate-marquee {
-    display: flex;
-    width: max-content;
-    animation: marquee 26s linear infinite;
-  }
-  .animate-marquee:hover {
-    animation-play-state: paused;
-  }
+    <!-- Header Actions -->
+    <div class="flex items-center gap-2 sm:gap-3 shrink-0">
+      <!-- Kids / Pro Mode Pill -->
+      <div class="flex items-center bg-surface-container p-1 rounded-full text-xs font-bold border border-outline-variant/30 select-none shadow-inner">
+        <button id="toggle-kids-btn" onclick="setAcademyMode('kids')" class="px-2.5 sm:px-3 py-1 rounded-full bg-primary text-white transition-all shadow-sm cursor-pointer" type="button">Kids 🐱</button>
+        <button id="toggle-pro-btn" onclick="setAcademyMode('pro')" class="px-2.5 sm:px-3 py-1 rounded-full text-on-surface-variant hover:text-on-surface transition-all cursor-pointer" type="button">Pro 🎓</button>
+      </div>
 
-  @keyframes floating {
-    0%, 100% { transform: translateY(0px) rotate(0deg); }
-    50% { transform: translateY(-9px) rotate(1deg); }
-  }
-  .animate-float {
-    animation: floating 4.5s ease-in-out infinite;
-  }
-  .animate-float-delayed {
-    animation: floating 5.2s ease-in-out 1.5s infinite;
-  }
+      <!-- Instagram Icon -->
+      <a aria-label="Instagram" class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] text-white flex items-center justify-center shadow-md hover:shadow-lg transition-all hover:scale-110 shrink-0" href="https://www.instagram.com/wlanguageacademy/" rel="noopener noreferrer" target="_blank">
+        <svg class="w-4 h-4 sm:w-5 sm:h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+      </a>
 
-  @keyframes glow {
-    0%, 100% { opacity: 0.4; transform: scale(1); }
-    50% { opacity: 0.7; transform: scale(1.06); }
-  }
-  .animate-glow {
-    animation: glow 6s ease-in-out infinite;
-  }
+      <!-- CTA Ön Kayıt Button -->
+      <a class="hidden sm:inline-flex items-center gap-1.5 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full bg-primary hover:bg-inverse-surface text-white text-xs sm:text-sm font-bold shadow-md hover:-translate-y-0.5 transition-all shrink-0 cursor-pointer" href="iletisim.html#on-kayit">
+        <span>Ön Kayıt</span>
+        <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+      </a>
 
-  .reveal-init {
-    opacity: 0;
-    transform: translateY(28px);
-    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-  .reveal-visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
+      <!-- Mobile Hamburger Button -->
+      <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="xl:hidden w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-surface-container text-primary flex items-center justify-center hover:bg-surface-container-high transition-colors" aria-label="Menüyü Aç" type="button">
+        <span class="material-symbols-outlined text-[22px]">menu</span>
+      </button>
+    </div>
+  </div>
 
-  .mascot-blend {
-    mix-blend-mode: multiply;
-  }
-</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"primary":"#621bcb","on-background":"#300248","on-surface-variant":"#4a4454","surface-tint":"#7334db","secondary":"#80449f","surface":"#fff7fc","surface-bright":"#fff7fc","outline":"#7b7486","on-tertiary":"#ffffff","on-tertiary-fixed-variant":"#6b3b00","on-primary-fixed":"#25005a","tertiary-container":"#985600","on-error-container":"#93000a","surface-container":"#fbe8ff","outline-variant":"#ccc3d7","on-secondary":"#ffffff","on-primary":"#ffffff","on-surface":"#300248","secondary-fixed-dim":"#e8b3ff","on-tertiary-fixed":"#2d1600","secondary-fixed":"#f6d9ff","primary-container":"#7b3fe4","surface-container-low":"#feefff","on-secondary-fixed-variant":"#662b85","inverse-surface":"#471c5f","on-secondary-fixed":"#310049","error-container":"#ffdad6","on-primary-fixed-variant":"#5a06c3","on-error":"#ffffff","tertiary-fixed-dim":"#ffb875","on-tertiary-container":"#ffdfc6","surface-container-lowest":"#ffffff","primary-fixed":"#eaddff","inverse-primary":"#d3bbff","secondary-container":"#df9cfe","surface-container-high":"#f8e0ff","tertiary":"#764100","primary-fixed-dim":"#d3bbff","tertiary-fixed":"#ffdcc0","error":"#ba1a1a","background":"#fff7fc","on-primary-container":"#ede0ff","surface-container-highest":"#f5d9ff","surface-dim":"#f1ceff","surface-variant":"#f5d9ff","on-secondary-container":"#672b86","inverse-on-surface":"#fcebff"},"borderRadius":{"DEFAULT":"1rem","lg":"2rem","xl":"3rem","full":"9999px"},"spacing":{"space-3xl":"4.5rem","space-md":"1rem","gutter-mobile":"1rem","space-lg":"1.5rem","space-xl":"2rem","margin":"3rem","gutter":"1.5rem","space-xs":"0.25rem","space-sm":"0.5rem","margin-mobile":"1.25rem","space-2xl":"3rem"},"fontFamily":{"headline-lg":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"display-hero":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"accent-script-highlight":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"display-hero-mobile":["Plus Jakarta Sans"],"label-lg":["Plus Jakarta Sans"]},"fontSize":{"headline-lg":["40px",{"lineHeight":"48px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-md":["16px",{"lineHeight":"24px","fontWeight":"400"}],"display-hero":["56px",{"lineHeight":"64px","letterSpacing":"-0.03em","fontWeight":"800"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.04em","fontWeight":"700"}],"headline-lg-mobile":["28px",{"lineHeight":"36px","letterSpacing":"-0.01em","fontWeight":"700"}],"headline-md":["28px",{"lineHeight":"36px","fontWeight":"700"}],"accent-script-highlight":["40px",{"lineHeight":"48px","letterSpacing":"0.01em","fontWeight":"700"}],"headline-sm":["22px",{"lineHeight":"30px","fontWeight":"600"}],"body-sm":["14px",{"lineHeight":"20px","fontWeight":"500"}],"body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}],"display-hero-mobile":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"800"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.02em","fontWeight":"700"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary selection:text-white"><header class="fixed top-0 left-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_14px_34px_-6px_rgba(123,63,228,0.08)] transition-all duration-300"><div class="h-20 max-w-[1280px] mx-auto px-margin flex items-center justify-between gap-space-md"><a class="flex items-center gap-space-sm group cursor-pointer" data-path="anasayfa" href="#anasayfa"><div class="p-space-xs bg-surface-container rounded-full flex items-center justify-center transition-transform group-hover:scale-105"><img alt="W Language Academy Logo" class="w-10 h-10 rounded-full object-cover" src="images/logo-kids.png"/></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary tracking-tight leading-none group-hover:text-primary-container transition-colors">W Language Academy</span><span class="font-label-md text-label-md text-secondary uppercase tracking-widest">Language School</span></div></a><nav class="hidden xl:flex items-center gap-space-xs bg-surface-container-low px-space-md py-space-xs rounded-full shadow-[0_2px_8px_rgba(91,31,122,0.04)] whitespace-nowrap" data-active-classes="bg-primary-container text-on-primary-container font-label-lg font-bold"><a class="font-label-lg text-label-lg px-space-md py-space-xs rounded-full text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="anasayfa" href="#anasayfa">Anasayfa</a><a class="font-label-lg text-label-lg px-space-md py-space-xs rounded-full text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="hakkimizda" href="hakkimizda.html">Hakkımızda</a><a class="font-label-lg text-label-lg px-space-md py-space-xs rounded-full text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="programlar" href="programlar.html">Programlar</a><a class="font-label-lg text-label-lg px-space-md py-space-xs rounded-full text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all whitespace-nowrap" data-path="nasil-calisiyoruz" href="nasil-calisiyoruz.html">Nasıl Çalışıyoruz</a><a class="font-label-lg text-label-lg px-space-md py-space-xs rounded-full text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="basarilar" href="basarilar.html">Başarılar</a><a aria-current="page" class="px-space-md py-space-xs rounded-full transition-all bg-primary-container text-on-primary-container font-label-lg font-bold" data-path="duyurular" href="duyurular.html">Duyurular</a><a class="font-label-lg text-label-lg px-space-md py-space-xs rounded-full text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="iletisim" href="iletisim.html">İletişim</a></nav><div class="flex items-center gap-space-sm shrink-0"><a aria-label="Instagram" class="w-10 h-10 rounded-full bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] text-white flex items-center justify-center shadow-md hover:shadow-lg transition-all hover:scale-110 hover:-translate-y-0.5 group shrink-0" href="https://www.instagram.com/wlanguageacademy/" rel="noopener noreferrer" target="_blank"><svg class="w-5 h-5 fill-current transition-transform group-hover:scale-105" viewbox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg></a><a class="group inline-flex items-center gap-space-xs px-space-lg py-2.5 rounded-full bg-primary hover:bg-inverse-surface text-on-primary font-label-lg whitespace-nowrap shadow-[0_14px_34px_-6px_rgba(123,63,228,0.25)] transition-all hover:-translate-y-0.5 active:translate-y-0 shrink-0 cursor-pointer" data-path="on-kayit" href="index.html#on-kayit"><span class="leading-none">Ön Kayıt</span><span class="material-symbols-outlined bg-tertiary-container text-on-tertiary p-space-xs rounded-full text-[16px] transition-transform group-hover:translate-x-1">arrow_forward</span></a></div></div></header><main class="w-full pt-20 bg-surface min-h-[calc(100vh-80px)]"><div class="flex flex-col w-full">
+  <!-- Mobile Drawer Menu -->
+  <div id="mobile-drawer" class="hidden xl:hidden bg-surface/98 backdrop-blur-2xl border-b border-surface-container shadow-2xl px-5 py-4 flex flex-col gap-2 transition-all">
+    <a class="py-2.5 px-3 rounded-xl font-semibold text-sm text-on-surface hover:bg-surface-container transition-colors" href="index.html" onclick="toggleMobileMenu()">Anasayfa</a>
+    <a class="py-2.5 px-3 rounded-xl font-semibold text-sm text-on-surface hover:bg-surface-container transition-colors" href="hakkimizda.html" onclick="toggleMobileMenu()">Hakkımızda</a>
+    <a class="py-2.5 px-3 rounded-xl font-semibold text-sm text-on-surface hover:bg-surface-container transition-colors" href="programlar.html" onclick="toggleMobileMenu()">Programlar</a>
+    <a class="py-2.5 px-3 rounded-xl font-semibold text-sm text-on-surface hover:bg-surface-container transition-colors" href="nasil-calisiyoruz.html" onclick="toggleMobileMenu()">Nasıl Çalışıyoruz</a>
+    <a class="py-2.5 px-3 rounded-xl font-semibold text-sm text-on-surface hover:bg-surface-container transition-colors" href="basarilar.html" onclick="toggleMobileMenu()">Başarılar</a>
+    <a class="py-2.5 px-3 rounded-xl font-bold text-sm bg-primary-container text-on-primary-container transition-colors" href="duyurular.html" onclick="toggleMobileMenu()">Duyurular</a>
+    <a class="py-2.5 px-3 rounded-xl font-semibold text-sm text-on-surface hover:bg-surface-container transition-colors" href="iletisim.html" onclick="toggleMobileMenu()">İletişim</a>
+    
+    <div class="pt-3 border-t border-surface-container flex items-center gap-3">
+      <a class="flex-1 py-2.5 text-center rounded-full bg-primary text-white text-sm font-bold shadow-md" href="iletisim.html#on-kayit" onclick="toggleMobileMenu()">Ön Kayıt Yap</a>
+      <a class="w-10 h-10 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-md shrink-0" href="https://wa.me/905444737693" target="_blank" rel="noopener noreferrer">
+        <span class="material-symbols-outlined text-[20px]">chat</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<main class="w-full pt-20 bg-surface min-h-[calc(100vh-80px)]"><div class="flex flex-col w-full">
 <!-- Breadcrumbs & Centered Header -->
 <section class="w-full max-w-[1280px] mx-auto px-margin pt-space-xl pb-space-lg flex flex-col items-center text-center">
 <nav aria-label="Breadcrumb" class="inline-flex items-center gap-space-xs px-space-md py-1.5 rounded-full bg-surface-container-low shadow-sm mb-space-md">
@@ -110,11 +141,11 @@
               Flaş Duyuru
             </span>
 <span class="px-space-md py-1 rounded-full bg-white/20 text-on-primary backdrop-blur-md font-label-md text-label-md">
-              2024–2025 Dönemi
+              2026–2027 Dönemi
             </span>
 </div>
 <h2 class="font-headline-md text-headline-md font-extrabold text-white leading-tight max-w-2xl">
-            2024–2025 Erken Kayıt Avantajları ve Cambridge Seviye Belirleme Seansları Başladı!
+            2026–2027 Erken Kayıt Avantajları ve Cambridge Seviye Belirleme Seansları Başladı!
           </h2>
 <p class="font-body-md text-body-md text-on-primary-container max-w-xl">
             Kontenjanlar 4-8 kişilik masalarla sınırlıdır. Çocuğunuzun Avrupa Ortak Dil Referans Çerçevesi (CEFR) uyumlu seviyesini uzman eğitimcilerimizle ücretsiz belirleyin.
@@ -147,7 +178,7 @@
 <span class="font-label-md text-label-md text-on-primary-container">Dakika</span>
 </div>
 </div>
-<a class="w-full inline-flex items-center justify-center gap-space-xs px-space-lg py-3 rounded-full bg-white text-primary font-label-lg text-label-lg font-bold shadow-lg hover:bg-surface-container-low transition-all hover:scale-105 active:scale-100" href="index.html#on-kayit">
+<a class="w-full inline-flex items-center justify-center gap-space-xs px-space-lg py-3 rounded-full bg-white text-primary font-label-lg text-label-lg font-bold shadow-lg hover:bg-surface-container-low transition-all hover:scale-105 active:scale-100" href="iletisim.html#on-kayit">
 <span>Seviye Tespit Randevusu Al</span>
 <span class="material-symbols-outlined text-[18px]">calendar_add_on</span>
 </a>
@@ -171,11 +202,11 @@
 <div class="flex items-center justify-between gap-space-xs">
 <span class="px-space-md py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-md text-label-md font-bold uppercase tracking-wider">Cambridge Sınavları</span>
 <span class="flex items-center gap-1 font-label-md text-label-md text-outline">
-<span class="material-symbols-outlined text-[16px]">schedule</span> 15 Mart 2025
+<span class="material-symbols-outlined text-[16px]">schedule</span> 15 Kasım 2026
             </span>
 </div>
 <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold leading-snug">
-            Cambridge Young Learners (YLE) Bahar Sınav Kayıtları Başladı
+            Cambridge Young Learners (YLE) Güz Sınav Kayıtları Başladı
           </h3>
 <p class="font-body-md text-body-md text-on-surface-variant">
             Pre-A1 Starters, A1 Movers ve A2 Flyers seviyelerinde uluslararası sertifikasyon için sınav kayıt takvimi açılmıştır. Öğrencilerimize özel sınav hazırlık rehberliği sağlanacaktır.
@@ -183,16 +214,16 @@
 <div class="p-space-md rounded-DEFAULT bg-surface-container-low space-y-space-xs">
 <div class="flex items-center justify-between text-body-sm font-body-sm">
 <span class="text-on-surface-variant">Son Başvuru Tarihi:</span>
-<span class="font-bold text-error">28 Nisan 2025</span>
+<span class="font-bold text-error">28 Kasım 2026</span>
 </div>
 <div class="flex items-center justify-between text-body-sm font-body-sm">
 <span class="text-on-surface-variant">Sınav Tarihi:</span>
-<span class="font-bold text-on-surface">24 Mayıs 2025</span>
+<span class="font-bold text-on-surface">19 Aralık 2026</span>
 </div>
 </div>
 </div>
 <div class="pt-space-lg flex items-center justify-between">
-<a class="inline-flex items-center gap-space-xs font-label-lg text-label-lg text-primary hover:text-primary-container font-bold group" href="index.html#on-kayit">
+<a class="inline-flex items-center gap-space-xs font-label-lg text-label-lg text-primary hover:text-primary-container font-bold group" href="iletisim.html#on-kayit">
 <span>Sınav Başvuru Şartları</span>
 <span class="material-symbols-outlined text-[18px] transition-transform group-hover:translate-x-1">arrow_forward</span>
 </a>
@@ -237,17 +268,17 @@
 </span>
 </div>
 </article>
-<!-- Card 3: İngiltere Yaz Okulu 2025 -->
+<!-- Card 3: İngiltere Yaz Okulu 2027 -->
 <article class="announcement-item flex flex-col justify-between bg-surface-container-lowest rounded-lg p-space-xl shadow-[0_4px_20px_rgba(91,31,122,0.06)] hover:shadow-xl transition-all duration-300 hover:-translate-y-1" data-category="kamp">
 <div class="space-y-space-md">
 <div class="flex items-center justify-between gap-space-xs">
 <span class="px-space-md py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-md text-label-md font-bold uppercase tracking-wider">Yurtdışı Kampları</span>
 <span class="flex items-center gap-1 font-label-md text-label-md text-outline">
-<span class="material-symbols-outlined text-[16px]">flight_takeoff</span> Yaz 2025
+<span class="material-symbols-outlined text-[16px]">flight_takeoff</span> Yaz 2027
             </span>
 </div>
 <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold leading-snug">
-            İngiltere Yaz Okulu 2025 Londra &amp; Oxford Bilgilendirme Semineri
+            İngiltere Yaz Okulu 2027 Londra &amp; Oxford Bilgilendirme Semineri
           </h3>
 <p class="font-body-md text-body-md text-on-surface-variant">
             10–16 yaş öğrencilere yönelik 2 haftalık dil ve kültür kampı detayları: Kampüs konaklama, Oxford kolej turları, vize süreçleri ve güvenlik protokolleri.
@@ -255,7 +286,7 @@
 <div class="p-space-md rounded-DEFAULT bg-surface-container-low space-y-space-xs">
 <div class="flex items-center justify-between text-body-sm font-body-sm">
 <span class="text-on-surface-variant">Veli Toplantısı:</span>
-<span class="font-bold text-on-surface">22 Mart 2025, 19:30 (Online)</span>
+<span class="font-bold text-on-surface">22 Kasım 2026, 19:30 (Online)</span>
 </div>
 <div class="flex items-center justify-between text-body-sm font-body-sm">
 <span class="text-on-surface-variant">Hedef Şehirler:</span>
@@ -300,7 +331,7 @@
 </div>
 </div>
 <div class="pt-space-lg flex items-center justify-between">
-<a class="inline-flex items-center gap-space-xs font-label-lg text-label-lg text-primary hover:text-primary-container font-bold group" href="index.html#on-kayit">
+<a class="inline-flex items-center gap-space-xs font-label-lg text-label-lg text-primary hover:text-primary-container font-bold group" href="iletisim.html#on-kayit">
 <span>Tanışma Dersi Talep Et</span>
 <span class="material-symbols-outlined text-[18px] transition-transform group-hover:translate-x-1">arrow_forward</span>
 </a>
@@ -327,7 +358,7 @@
 <div class="p-space-md rounded-DEFAULT bg-surface-container-low space-y-space-xs">
 <div class="flex items-center justify-between text-body-sm font-body-sm">
 <span class="text-on-surface-variant">Uygulama Tarihi:</span>
-<span class="font-bold text-on-surface">5-6 Nisan Hafta Sonu</span>
+<span class="font-bold text-on-surface">5-6 Aralık Hafta Sonu</span>
 </div>
 <div class="flex items-center justify-between text-body-sm font-body-sm">
 <span class="text-on-surface-variant">Kapsam:</span>
@@ -336,7 +367,7 @@
 </div>
 </div>
 <div class="pt-space-lg flex items-center justify-between">
-<a class="inline-flex items-center gap-space-xs font-label-lg text-label-lg text-primary hover:text-primary-container font-bold group" href="index.html#on-kayit">
+<a class="inline-flex items-center gap-space-xs font-label-lg text-label-lg text-primary hover:text-primary-container font-bold group" href="iletisim.html#on-kayit">
 <span>Strateji Kampına Katıl</span>
 <span class="material-symbols-outlined text-[18px] transition-transform group-hover:translate-x-1">arrow_forward</span>
 </a>
@@ -361,27 +392,68 @@
 </div>
 </div>
 </section>
-<!-- Section 4: Aylık İnteraktif Akademi Takvimi / Ajanda Görünümü -->
-<section class="w-full max-w-[1280px] mx-auto px-margin mb-space-3xl">
-<div class="bg-surface-container-lowest rounded-xl p-space-xl md:p-space-2xl shadow-xl">
+<!-- Section 4: Dinamik Akademi Takvimi / Ajanda Görünümü (Kasım 2026 Bazlı & Canlı Motor) -->
+<section class="w-full max-w-[1280px] mx-auto px-margin mb-space-3xl" id="calendar-section">
+<div class="bg-surface-container-lowest rounded-xl p-space-xl md:p-space-2xl shadow-xl transition-all">
 <div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md pb-space-xl border-b border-surface-container">
 <div>
-<span class="font-label-md text-label-md uppercase tracking-wider text-secondary font-bold">Akademik Ajanda</span>
-<h2 class="font-headline-md text-headline-md text-on-surface font-extrabold">Mart 2025 Akademi Takvimi</h2>
-<p class="font-body-sm text-body-sm text-on-surface-variant">Speaking seansları, veli buluşmaları ve resmi sınav etapları</p>
-</div>
 <div class="flex items-center gap-space-xs">
-<div class="flex items-center gap-2 px-space-md py-1.5 rounded-full bg-surface-container text-body-sm font-body-sm text-on-surface-variant">
+<span class="font-label-md text-label-md uppercase tracking-wider text-secondary font-bold">Akademik Ajanda</span>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-bold bg-secondary-fixed text-on-secondary-fixed">Canlı Takvim Motoru</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface font-extrabold mt-1" id="calendar-title">Kasım 2026 Akademi Takvimi</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Speaking seansları, veli buluşmaları ve resmi sınav etapları (Etkinliklere tıklayarak detay inceleyin)</p>
+</div>
+<!-- Controls: Prev, Today, Next & Legend -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<!-- Legend items -->
+<div class="hidden lg:flex items-center gap-2 px-space-md py-1.5 rounded-full bg-surface-container text-body-sm font-body-sm text-on-surface-variant text-xs">
 <span class="w-2.5 h-2.5 rounded-full bg-primary"></span> Speaking Club
-            <span class="w-2.5 h-2.5 rounded-full bg-secondary ml-2"></span> Sınav &amp; Kayıt
-            <span class="w-2.5 h-2.5 rounded-full bg-tertiary-container ml-2"></span> Veli Semineri
-          </div>
+<span class="w-2.5 h-2.5 rounded-full bg-secondary ml-2"></span> Sınav &amp; Kayıt
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary-container ml-2"></span> Veli &amp; Seminer
+</div>
+<!-- Month Navigation buttons -->
+<div class="inline-flex items-center gap-1 bg-surface-container-low p-1 rounded-full shadow-inner border border-surface-container">
+<button aria-label="Önceki Ay" class="w-9 h-9 rounded-full bg-surface-container-lowest hover:bg-primary hover:text-white text-on-surface flex items-center justify-center transition-all cursor-pointer shadow-sm active:scale-95" id="btn-prev-month" type="button">
+<span class="material-symbols-outlined text-[20px]">chevron_left</span>
+</button>
+<button class="px-space-md py-1.5 rounded-full font-label-md text-label-md font-bold text-primary hover:bg-primary hover:text-white transition-all cursor-pointer" id="btn-current-month" type="button">
+Kasım 2026 (Varsayılan)
+</button>
+<button aria-label="Sonraki Ay" class="w-9 h-9 rounded-full bg-surface-container-lowest hover:bg-primary hover:text-white text-on-surface flex items-center justify-center transition-all cursor-pointer shadow-sm active:scale-95" id="btn-next-month" type="button">
+<span class="material-symbols-outlined text-[20px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Mini Detail Card Modal/Drawer for Clicked Event -->
+<div class="hidden mt-space-md p-space-md rounded-lg bg-surface-container-low border border-primary/20 transition-all duration-300 flex-col md:flex-row md:items-center justify-between gap-space-md" id="calendar-event-detail">
+<div class="flex items-start gap-space-sm">
+<span class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center shrink-0 shadow-sm" id="detail-icon-wrap">
+<span class="material-symbols-outlined text-[20px]" id="detail-icon">event</span>
+</span>
+<div>
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-headline-sm text-sm font-bold text-on-surface" id="detail-title">Etkinlik Başlığı</span>
+<span class="px-2 py-0.5 rounded-full text-[11px] font-bold uppercase tracking-wider" id="detail-category-badge">Kategori</span>
+<span class="text-xs text-outline font-medium" id="detail-date">15 Kasım 2026</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1" id="detail-desc">Etkinlik açıklaması burada yer alır.</p>
+</div>
+</div>
+<div class="flex items-center gap-space-xs shrink-0 self-end md:self-center">
+<a class="px-space-md py-1.5 rounded-full bg-primary text-on-primary font-label-md text-label-md font-bold hover:bg-primary-container transition-all" href="iletisim.html#on-kayit" id="detail-action-btn">
+Kayıt / Randevu
+</a>
+<button class="w-8 h-8 rounded-full bg-surface-container-highest text-on-surface flex items-center justify-center hover:bg-outline-variant transition-colors" id="btn-close-detail" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
 </div>
 </div>
 <!-- Calendar Matrix -->
 <div class="pt-space-lg overflow-x-auto">
 <div class="min-w-[700px]">
-<!-- Days of Week Header -->
+<!-- Days of Week Header (Monday first) -->
 <div class="grid grid-cols-7 gap-space-xs pb-space-sm text-center font-label-md text-label-md text-outline uppercase font-bold tracking-wider">
 <div>Pzt</div>
 <div>Sal</div>
@@ -391,122 +463,27 @@
 <div class="text-primary font-extrabold">Cmt</div>
 <div class="text-primary font-extrabold">Paz</div>
 </div>
-<!-- Calendar Grid Days -->
-<div class="grid grid-cols-7 gap-space-xs">
-<!-- Previous Month Pad -->
-<div class="h-28 p-2 rounded-DEFAULT bg-surface-container-low/40 opacity-40 text-on-surface-variant text-label-md">24</div>
-<div class="h-28 p-2 rounded-DEFAULT bg-surface-container-low/40 opacity-40 text-on-surface-variant text-label-md">25</div>
-<div class="h-28 p-2 rounded-DEFAULT bg-surface-container-low/40 opacity-40 text-on-surface-variant text-label-md">26</div>
-<div class="h-28 p-2 rounded-DEFAULT bg-surface-container-low/40 opacity-40 text-on-surface-variant text-label-md">27</div>
-<div class="h-28 p-2 rounded-DEFAULT bg-surface-container-low/40 opacity-40 text-on-surface-variant text-label-md">28</div>
-<!-- March 1-2 -->
-<div class="h-28 p-2 rounded-DEFAULT bg-surface-container-low flex flex-col justify-between">
-<span class="font-label-md text-label-md font-bold text-on-surface">1</span>
-<div class="px-1.5 py-1 rounded bg-primary/10 text-primary text-[11px] font-bold truncate" title="Speaking Club: Beginners">
-                Speaking: A1
-              </div>
-</div>
-<div class="h-28 p-2 rounded-DEFAULT bg-surface-container-low flex flex-col justify-between">
-<span class="font-label-md text-label-md font-bold text-on-surface">2</span>
-<div class="text-[11px] text-outline italic">Serbest Etüt</div>
-</div>
-<!-- March 3-9 -->
-<div class="h-28 p-2 rounded-DEFAULT bg-surface-container-low flex flex-col justify-between">
-<span class="font-label-md text-label-md font-bold text-on-surface">3</span>
-<div class="text-[11px] text-on-surface-variant">Ders Başlangıcı</div>
-</div>
-<div class="h-28 p-2 rounded-DEFAULT bg-surface-container-low">
-<span class="font-label-md text-label-md font-bold text-on-surface">4</span>
-</div>
-<div class="h-28 p-2 rounded-DEFAULT bg-surface-container-low flex flex-col justify-between">
-<span class="font-label-md text-label-md font-bold text-on-surface">5</span>
-<div class="px-1.5 py-1 rounded bg-secondary-fixed text-on-secondary-fixed text-[11px] font-bold truncate">
-                Cambridge Mock
-              </div>
-</div>
-<div class="h-28 p-2 rounded-DEFAULT bg-surface-container-low">
-<span class="font-label-md text-label-md font-bold text-on-surface">6</span>
-</div>
-<div class="h-28 p-2 rounded-DEFAULT bg-surface-container-low">
-<span class="font-label-md text-label-md font-bold text-on-surface">7</span>
-</div>
-<div class="h-28 p-2 rounded-DEFAULT bg-surface-container-low flex flex-col justify-between ring-2 ring-primary/30">
-<div class="flex items-center justify-between">
-<span class="font-label-md text-label-md font-bold text-primary">8</span>
-<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
-</div>
-<div class="px-1.5 py-1 rounded bg-primary text-on-primary text-[11px] font-bold truncate" title="British Tea &amp; Debate 14:00">
-                British Tea &amp; Debate
-              </div>
-</div>
-<div class="h-28 p-2 rounded-DEFAULT bg-surface-container-low">
-<span class="font-label-md text-label-md font-bold text-on-surface">9</span>
-</div>
-<!-- March 10-16 -->
-<div class="h-28 p-2 rounded-DEFAULT bg-surface-container-low">
-<span class="font-label-md text-label-md font-bold text-on-surface">10</span>
-</div>
-<div class="h-28 p-2 rounded-DEFAULT bg-surface-container-low flex flex-col justify-between">
-<span class="font-label-md text-label-md font-bold text-on-surface">11</span>
-<div class="px-1.5 py-1 rounded bg-tertiary-fixed text-on-tertiary-fixed text-[11px] font-bold truncate">
-                Veli Danışmanlığı
-              </div>
-</div>
-<div class="h-28 p-2 rounded-DEFAULT bg-surface-container-low">
-<span class="font-label-md text-label-md font-bold text-on-surface">12</span>
-</div>
-<div class="h-28 p-2 rounded-DEFAULT bg-surface-container-low">
-<span class="font-label-md text-label-md font-bold text-on-surface">13</span>
-</div>
-<div class="h-28 p-2 rounded-DEFAULT bg-surface-container-low">
-<span class="font-label-md text-label-md font-bold text-on-surface">14</span>
-</div>
-<div class="h-28 p-2 rounded-DEFAULT bg-surface-container-low flex flex-col justify-between">
-<span class="font-label-md text-label-md font-bold text-on-surface">15</span>
-<div class="px-1.5 py-1 rounded bg-primary/10 text-primary text-[11px] font-bold truncate">
-                Speaking: Teenagers
-              </div>
-</div>
-<div class="h-28 p-2 rounded-DEFAULT bg-surface-container-low">
-<span class="font-label-md text-label-md font-bold text-on-surface">16</span>
-</div>
-<!-- March 17-23 -->
-<div class="h-28 p-2 rounded-DEFAULT bg-surface-container-low">
-<span class="font-label-md text-label-md font-bold text-on-surface">17</span>
-</div>
-<div class="h-28 p-2 rounded-DEFAULT bg-surface-container-low">
-<span class="font-label-md text-label-md font-bold text-on-surface">18</span>
-</div>
-<div class="h-28 p-2 rounded-DEFAULT bg-surface-container-low">
-<span class="font-label-md text-label-md font-bold text-on-surface">19</span>
-</div>
-<div class="h-28 p-2 rounded-DEFAULT bg-surface-container-low">
-<span class="font-label-md text-label-md font-bold text-on-surface">20</span>
-</div>
-<div class="h-28 p-2 rounded-DEFAULT bg-surface-container-low">
-<span class="font-label-md text-label-md font-bold text-on-surface">21</span>
-</div>
-<div class="h-28 p-2 rounded-DEFAULT bg-surface-container-low flex flex-col justify-between bg-tertiary-fixed/30">
-<span class="font-label-md text-label-md font-bold text-on-surface">22</span>
-<div class="px-1.5 py-1 rounded bg-tertiary-container text-on-tertiary text-[11px] font-bold truncate">
-                İngiltere Yaz Okulu Semineri
-              </div>
-</div>
-<div class="h-28 p-2 rounded-DEFAULT bg-surface-container-low">
-<span class="font-label-md text-label-md font-bold text-on-surface">23</span>
+<!-- Calendar Grid Days (Dynamically Rendered via JS) -->
+<div class="grid grid-cols-7 gap-space-xs" id="calendar-grid">
+<!-- Populated by JavaScript -->
 </div>
 </div>
 </div>
+<!-- Mobile Legend -->
+<div class="flex lg:hidden flex-wrap items-center justify-center gap-2 pt-space-md text-xs text-on-surface-variant">
+<span class="inline-flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-primary"></span> Speaking Club</span>
+<span class="inline-flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-secondary"></span> Sınav &amp; Kayıt</span>
+<span class="inline-flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-tertiary-container"></span> Veli &amp; Seminer</span>
 </div>
 <!-- Action link for downloading PDF calendar -->
 <div class="mt-space-lg pt-space-md border-t border-surface-container flex flex-col sm:flex-row items-center justify-between gap-space-sm text-body-sm font-body-sm">
 <span class="text-on-surface-variant flex items-center gap-1.5">
 <span class="material-symbols-outlined text-[18px] text-primary">event_note</span>
-          Tüm akademik takvim MEB ve Cambridge Assessment sınav dönemlerine göre güncellenir.
-        </span>
-<button class="inline-flex items-center gap-space-xs text-primary font-label-md text-label-md font-bold hover:underline cursor-pointer" type="button">
+<span id="calendar-footnote">Seçili ay için tüm akademik takvim MEB ve Cambridge Assessment sınav dönemlerine göre güncellenir.</span>
+</span>
+<button class="inline-flex items-center gap-space-xs text-primary font-label-md text-label-md font-bold hover:underline cursor-pointer" onclick="window.print()" type="button">
 <span class="material-symbols-outlined text-[18px]">download</span>
-          2024-2025 Yıllık Takvimi İndir (.PDF)
+          2026-2027 Akademik Takvimi İndir (.PDF)
         </button>
 </div>
 </div>
@@ -570,10 +547,10 @@
 </div>
 </div>
 </section>
-<!-- Interactive JavaScript for Category Filtering & Dynamic Countdown -->
+<!-- Interactive JavaScript: Category Filtering, Dynamic Calendar Engine & Dynamic Countdown -->
 <script>
     document.addEventListener('DOMContentLoaded', () => {
-      // Filtering functionality
+      // 1. Filtering functionality
       const tabs = document.querySelectorAll('.filter-tab');
       const cards = document.querySelectorAll('.announcement-item');
       const counter = document.getElementById('item-counter');
@@ -609,7 +586,241 @@
         });
       });
 
-      // Countdown simulation
+      // 2. Dynamic Calendar Engine (Defaults to Kasım 2026 as requested)
+      const turkishMonths = [
+        "Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran",
+        "Temmuz", "Ağustos", "Eylül", "Ekim", "Kasım", "Aralık"
+      ];
+
+      // Academy Events Database indexed by "YYYY-MM-DD"
+      const academyEvents = {
+        // November 2026 Academic Events
+        "2026-11-01": [
+          { title: "Speaking: A1 Başlangıç", time: "11:00", cat: "speaking", icon: "forum", desc: "Küçük yaş grubu için oyunlaştırılmış A1 Speaking kulübü seansı." }
+        ],
+        "2026-11-02": [
+          { title: "Ders Başlangıcı", time: "16:30", cat: "exam", icon: "school", desc: "Kasım dönemi 7-9 yaş yeni grup ders başlangıcı." }
+        ],
+        "2026-11-05": [
+          { title: "Cambridge Mock Sınavı", time: "15:00", cat: "exam", icon: "assignment", desc: "A2 Flyers ve B1 Preliminary prova deneme oturumu." }
+        ],
+        "2026-11-07": [
+          { title: "British Tea & Debate", time: "14:00", cat: "speaking", icon: "coffee", desc: "Ortaokul grubu için İngiliz çay saati ve münazara kulübü." }
+        ],
+        "2026-11-11": [
+          { title: "Veli Danışmanlığı", time: "18:00", cat: "seminar", icon: "groups", desc: "Bireysel öğrenci gelişim ve Cambridge karne bilgilendirmesi." }
+        ],
+        "2026-11-14": [
+          { title: "Speaking: Teenagers B1", time: "13:30", cat: "speaking", icon: "forum", desc: "Lise ve ortaokul gençleri için akıcı konuşma ve tartışma atölyesi." }
+        ],
+        "2026-11-15": [
+          { title: "Cambridge Başvuru Başlangıcı", time: "09:00", cat: "exam", icon: "verified", desc: "Aralık resmi sınavları için erken kayıt dönemi açılışı." }
+        ],
+        "2026-11-21": [
+          { title: "İngiltere Yaz Okulu Semineri", time: "19:30", cat: "seminar", icon: "flight_takeoff", desc: "Oxford ve Londra 2027 yaz kampları veli bilgilendirme semineri." }
+        ],
+        "2026-11-25": [
+          { title: "Grammar Lab: Phrasal Verbs", time: "17:00", cat: "speaking", icon: "psychology", desc: "Doğal İngilizce kullanımı ve deyimsel ifadeler interaktif etüdü." }
+        ],
+        "2026-11-28": [
+          { title: "Cambridge Son Başvuru", time: "18:00", cat: "exam", icon: "notification_important", desc: "Güz dönemi YLE sınav kayıtlarının resmi kapanışı." }
+        ],
+        // Sample events for surrounding months
+        "2026-12-05": [
+          { title: "Cambridge Resmi Sınav", time: "10:00", cat: "exam", icon: "school", desc: "Cambridge Assessment YLE resmi sınav günü." }
+        ],
+        "2026-10-24": [
+          { title: "Veli Tanışma Toplantısı", time: "11:00", cat: "seminar", icon: "groups", desc: "Güz dönemi veli oryantasyon toplantısı." }
+        ]
+      };
+
+      // State initialized to November 2026 (Month is 0-indexed: 10 = November)
+      let currentYear = 2026;
+      let currentMonth = 10; 
+
+      const titleEl = document.getElementById('calendar-title');
+      const gridEl = document.getElementById('calendar-grid');
+      const prevBtn = document.getElementById('btn-prev-month');
+      const nextBtn = document.getElementById('btn-next-month');
+      const currentBtn = document.getElementById('btn-current-month');
+      const detailBox = document.getElementById('calendar-event-detail');
+      const detailTitle = document.getElementById('detail-title');
+      const detailBadge = document.getElementById('detail-category-badge');
+      const detailDate = document.getElementById('detail-date');
+      const detailDesc = document.getElementById('detail-desc');
+      const detailIcon = document.getElementById('detail-icon');
+      const detailIconWrap = document.getElementById('detail-icon-wrap');
+      const closeDetailBtn = document.getElementById('btn-close-detail');
+
+      function getCategoryStyles(category) {
+        switch(category) {
+          case 'speaking':
+            return {
+              badge: 'bg-primary text-on-primary',
+              bgLight: 'bg-primary/10 text-primary',
+              pill: 'bg-primary text-white',
+              label: 'Speaking Club',
+              iconWrap: 'bg-primary text-white'
+            };
+          case 'exam':
+            return {
+              badge: 'bg-secondary-fixed text-on-secondary-fixed',
+              bgLight: 'bg-secondary-fixed/40 text-on-secondary-fixed',
+              pill: 'bg-secondary text-white',
+              label: 'Sınav & Kayıt',
+              iconWrap: 'bg-secondary text-white'
+            };
+          case 'seminar':
+          default:
+            return {
+              badge: 'bg-tertiary-fixed text-on-tertiary-fixed',
+              bgLight: 'bg-tertiary-fixed/30 text-on-tertiary-fixed',
+              pill: 'bg-tertiary-container text-on-tertiary',
+              label: 'Veli & Seminer',
+              iconWrap: 'bg-tertiary-container text-white'
+            };
+        }
+      }
+
+      function showEventDetail(ev, dateFormatted) {
+        if (!detailBox) return;
+        const style = getCategoryStyles(ev.cat);
+        detailTitle.textContent = `${ev.title} (${ev.time})`;
+        detailDesc.textContent = ev.desc;
+        detailDate.textContent = dateFormatted;
+        detailBadge.className = `px-2 py-0.5 rounded-full text-[11px] font-bold uppercase tracking-wider ${style.badge}`;
+        detailBadge.textContent = style.label;
+        detailIcon.textContent = ev.icon || 'event';
+        detailIconWrap.className = `w-10 h-10 rounded-full flex items-center justify-center shrink-0 shadow-sm ${style.iconWrap}`;
+        
+        detailBox.classList.remove('hidden');
+        detailBox.classList.add('flex');
+        detailBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+
+      if (closeDetailBtn) {
+        closeDetailBtn.addEventListener('click', () => {
+          detailBox.classList.add('hidden');
+          detailBox.classList.remove('flex');
+        });
+      }
+
+      function renderCalendar(year, month) {
+        titleEl.textContent = `${turkishMonths[month]} ${year} Akademi Takvimi`;
+        gridEl.innerHTML = '';
+
+        // First day of month & number of days in month
+        const firstDayOfMonth = new Date(year, month, 1);
+        const lastDayOfMonth = new Date(year, month + 1, 0);
+        const daysInMonth = lastDayOfMonth.getDate();
+
+        // JS getDay(): Sunday=0, Monday=1, ... Saturday=6
+        // European convention: Monday=0, Sunday=6
+        let startDayIndex = firstDayOfMonth.getDay() - 1;
+        if (startDayIndex === -1) startDayIndex = 6;
+
+        // Previous month days to pad
+        const prevMonthLastDay = new Date(year, month, 0).getDate();
+        for (let i = startDayIndex - 1; i >= 0; i--) {
+          const dayNum = prevMonthLastDay - i;
+          const padCell = document.createElement('div');
+          padCell.className = 'h-28 p-2 rounded-DEFAULT bg-surface-container-low/40 opacity-40 text-on-surface-variant text-label-md flex flex-col justify-between';
+          padCell.innerHTML = `<span class="font-label-md text-label-md text-outline">${dayNum}</span>`;
+          gridEl.appendChild(padCell);
+        }
+
+        // Current month cells
+        for (let day = 1; day <= daysInMonth; day++) {
+          const dateStr = `${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+          const dayEvents = academyEvents[dateStr] || [];
+          const cell = document.createElement('div');
+          
+          // Weekend highlight check
+          const thisDate = new Date(year, month, day);
+          const isWeekend = (thisDate.getDay() === 0 || thisDate.getDay() === 6);
+          const hasEvents = dayEvents.length > 0;
+
+          cell.className = `h-28 p-2 rounded-DEFAULT bg-surface-container-low flex flex-col justify-between transition-all hover:bg-surface-container hover:shadow-sm ${hasEvents ? 'ring-1 ring-primary/20' : ''}`;
+
+          // Header line with Day number
+          const topRow = document.createElement('div');
+          topRow.className = 'flex items-center justify-between';
+          topRow.innerHTML = `<span class="font-label-md text-label-md font-bold ${isWeekend ? 'text-primary' : 'text-on-surface'}">${day}</span>`;
+          
+          if (hasEvents) {
+            topRow.innerHTML += `<span class="w-1.5 h-1.5 rounded-full bg-primary animate-ping"></span>`;
+          }
+          cell.appendChild(topRow);
+
+          // Events wrapper
+          const eventsWrap = document.createElement('div');
+          eventsWrap.className = 'flex flex-col gap-1 overflow-hidden';
+
+          if (dayEvents.length > 0) {
+            dayEvents.forEach(ev => {
+              const style = getCategoryStyles(ev.cat);
+              const pill = document.createElement('button');
+              pill.type = 'button';
+              pill.className = `w-full text-left px-1.5 py-1 rounded text-[11px] font-bold truncate transition-all hover:scale-[1.02] active:scale-95 cursor-pointer ${style.pill}`;
+              pill.title = `${ev.title} (${ev.time})`;
+              pill.textContent = ev.title;
+              pill.addEventListener('click', (e) => {
+                e.stopPropagation();
+                showEventDetail(ev, `${day} ${turkishMonths[month]} ${year}`);
+              });
+              eventsWrap.appendChild(pill);
+            });
+          } else if (isWeekend) {
+            eventsWrap.innerHTML = `<div class="text-[11px] text-outline italic">Serbest Etüt & Kulüp</div>`;
+          }
+
+          cell.appendChild(eventsWrap);
+          gridEl.appendChild(cell);
+        }
+
+        // Trailing padding cells to make neat full rows of 7
+        const totalCellsSoFar = startDayIndex + daysInMonth;
+        const remainder = totalCellsSoFar % 7;
+        if (remainder !== 0) {
+          const cellsToAdd = 7 - remainder;
+          for (let d = 1; d <= cellsToAdd; d++) {
+            const nextPad = document.createElement('div');
+            nextPad.className = 'h-28 p-2 rounded-DEFAULT bg-surface-container-low/40 opacity-40 text-on-surface-variant text-label-md flex flex-col justify-between';
+            nextPad.innerHTML = `<span class="font-label-md text-label-md text-outline">${d}</span>`;
+            gridEl.appendChild(nextPad);
+          }
+        }
+      }
+
+      // Event Listeners for Calendar Controls
+      prevBtn.addEventListener('click', () => {
+        currentMonth--;
+        if (currentMonth < 0) {
+          currentMonth = 11;
+          currentYear--;
+        }
+        renderCalendar(currentYear, currentMonth);
+      });
+
+      nextBtn.addEventListener('click', () => {
+        currentMonth++;
+        if (currentMonth > 11) {
+          currentMonth = 0;
+          currentYear++;
+        }
+        renderCalendar(currentYear, currentMonth);
+      });
+
+      currentBtn.addEventListener('click', () => {
+        currentYear = 2026;
+        currentMonth = 10; // Kasım 2026
+        renderCalendar(currentYear, currentMonth);
+      });
+
+      // Initial Render: Kasım 2026
+      renderCalendar(currentYear, currentMonth);
+
+      // 3. Countdown simulation
       let days = 14, hours = 9, minutes = 42;
       const dEl = document.getElementById('countdown-days');
       const hEl = document.getElementById('countdown-hours');
@@ -633,21 +844,490 @@
       }, 60000);
     });
   </script>
-</div></main><footer class="w-full relative bg-inverse-surface text-inverse-on-surface overflow-hidden pt-space-2xl pb-space-xl mt-space-3xl"><div class="absolute top-0 left-0 right-0 h-8 bg-surface rounded-b-[40px]"></div><div class="max-w-[1280px] mx-auto px-margin pt-space-xl"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-2xl pb-space-2xl"><div class="flex flex-col gap-space-md"><div class="flex items-center gap-space-sm"><div class="p-space-xs bg-surface-container-lowest rounded-full inline-flex"><img alt="W Language Academy Logo" class="w-10 h-10 rounded-full object-cover" src="images/logo-kids.png"/></div><span class="font-headline-sm text-headline-sm text-inverse-on-surface font-bold">W Language Academy</span></div><p class="font-accent-script-highlight text-body-lg text-secondary-fixed-dim italic leading-snug">Learn · Speak · Grow</p><p class="font-body-sm text-body-sm text-outline-variant">Your Language Partner! Çocuklar ve gençler için yenilikçi, neşeli ve iletişim odaklı dil öğrenme yolculuğu.</p></div><div class="flex flex-col gap-space-md"><span class="font-label-lg text-label-lg text-tertiary-fixed tracking-wider uppercase font-bold">Hızlı Bağlantılar</span><ul class="flex flex-col gap-space-sm"><li class="leading-none"><a class="font-body-sm text-body-sm text-outline-variant hover:text-surface-container-lowest transition-colors" data-path="anasayfa" href="#anasayfa">Anasayfa</a></li><li class="leading-none"><a class="font-body-sm text-body-sm text-outline-variant hover:text-surface-container-lowest transition-colors" data-path="hakkimizda" href="hakkimizda.html">Hakkımızda</a></li><li class="leading-none"><a class="font-body-sm text-body-sm text-outline-variant hover:text-surface-container-lowest transition-colors" data-path="programlar" href="programlar.html">Programlar</a></li><li class="leading-none"><a class="font-body-sm text-body-sm text-outline-variant hover:text-surface-container-lowest transition-colors" data-path="nasil-calisiyoruz" href="nasil-calisiyoruz.html">Nasıl Çalışıyoruz</a></li><li class="leading-none"><a class="font-body-sm text-body-sm text-outline-variant hover:text-surface-container-lowest transition-colors" data-path="basarilar" href="basarilar.html">Başarı Hikayeleri</a></li><li class="leading-none"><a class="font-body-sm text-body-sm text-outline-variant hover:text-surface-container-lowest transition-colors" data-path="duyurular" href="duyurular.html">Duyurular &amp; Etkinlikler</a></li><li class="leading-none"><a class="font-body-sm text-body-sm text-outline-variant hover:text-surface-container-lowest transition-colors" data-path="iletisim" href="iletisim.html">İletişim</a></li></ul></div><div class="flex flex-col gap-space-md"><span class="font-label-lg text-label-lg text-tertiary-fixed tracking-wider uppercase font-bold">Yasal &amp; Güvenlik</span><ul class="flex flex-col gap-space-sm"><li class="leading-none"><a class="font-body-sm text-body-sm text-outline-variant hover:text-surface-container-lowest transition-colors" data-path="kullanim-kosullari" href="#">Kullanım Koşulları</a></li><li class="leading-none"><a class="font-body-sm text-body-sm text-outline-variant hover:text-surface-container-lowest transition-colors" data-path="gizlilik-ve-aydinlatma-metni" href="#">Gizlilik ve Aydınlatma Metni</a></li><li class="leading-none"><a class="font-body-sm text-body-sm text-outline-variant hover:text-surface-container-lowest transition-colors" data-path="cerez-bildirimi" href="#">Çerez Bildirimi</a></li><li class="leading-none"><a class="font-body-sm text-body-sm text-outline-variant hover:text-surface-container-lowest transition-colors" data-path="acik-riza-metni" href="#">Açık Rıza Metni</a></li></ul></div><div class="flex flex-col gap-space-md"><span class="font-label-lg text-label-lg text-tertiary-fixed tracking-wider uppercase font-bold">Bize Ulaşın</span><p class="font-body-sm text-body-sm text-outline-variant">Sorularınız ve erken kayıt avantajları için hemen bir danışmanımızla görüşün.</p><div class="flex items-center gap-space-sm pt-space-xs"><a aria-label="Instagram" class="w-10 h-10 rounded-full bg-secondary/30 flex items-center justify-center hover:bg-secondary-container hover:text-on-secondary-container transition-all hover:scale-110" href="https://www.instagram.com/wlanguageacademy/" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-[20px]">photo_camera</span></a><a aria-label="E-posta" class="w-10 h-10 rounded-full bg-secondary/30 flex items-center justify-center hover:bg-secondary-container hover:text-on-secondary-container transition-all hover:scale-110" href="mailto:wlanguageacademy@gmail.com"><span class="material-symbols-outlined text-[20px]">mail</span></a><a aria-label="Telefon" class="w-10 h-10 rounded-full bg-secondary/30 flex items-center justify-center hover:bg-secondary-container hover:text-on-secondary-container transition-all hover:scale-110" href="tel:05444737693"><span class="material-symbols-outlined text-[20px]">call</span></a></div></div></div><div class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md"><span class="font-body-sm text-body-sm text-outline-variant text-center md:text-left">© 2026 W Language Academy. Tüm hakları saklıdır.</span><div class="flex items-center gap-space-xs"><span class="font-label-md text-label-md px-space-md py-space-xs bg-surface-container-highest/20 rounded-full text-secondary-fixed">English &amp; Global Languages</span></div></div></div></footer><aside aria-label="Hızlı İletişim Kanalları" class="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3"><div class="flex items-center gap-space-xs group"><span class="hidden sm:inline-flex items-center px-space-md py-1.5 rounded-full bg-surface-container-lowest/95 backdrop-blur-md shadow-lg text-on-surface font-label-md text-label-md font-bold transition-all duration-300 opacity-90 group-hover:opacity-100 group-hover:scale-105 pointer-events-none border border-surface-container-high">Instagram'da Takip Edin</span><a aria-label="Instagram ile İletişime Geç" class="w-12 h-12 rounded-full flex items-center justify-center shadow-xl transition-all duration-300 hover:scale-110 active:scale-95 text-white bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7]" href="https://www.instagram.com/wlanguageacademy/" rel="noopener noreferrer" target="_blank"><svg class="w-6 h-6 fill-current drop-shadow-sm" viewbox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg></a></div><div class="flex items-center gap-space-xs group"><span class="hidden sm:inline-flex items-center px-space-md py-1.5 rounded-full bg-surface-container-lowest/95 backdrop-blur-md shadow-xl text-on-surface font-label-md text-label-md font-bold transition-all duration-300 opacity-90 group-hover:opacity-100 group-hover:scale-105 pointer-events-none border border-surface-container-high"><span class="w-2 h-2 rounded-full bg-[#25D366] mr-2 animate-ping"></span>WhatsApp ile İletişime Geç</span><a aria-label="WhatsApp ile İletişime Geç" class="relative w-14 h-14 rounded-full flex items-center justify-center shadow-2xl transition-all duration-300 hover:scale-110 active:scale-95 bg-[#25D366] text-white" href="https://wa.me/905444737693" rel="noopener noreferrer" target="_blank"><span class="absolute inset-0 rounded-full animate-ping opacity-30 pointer-events-none bg-[#25D366]"></span><svg class="w-8 h-8 fill-current drop-shadow-sm" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.81 13.47 3.81 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.53 7.34C9.36 7.34 9.09 7.4 8.87 7.65C8.64 7.89 8 8.49 8 9.72C8 10.95 8.89 12.14 9.02 12.3C9.14 12.47 10.77 14.97 13.25 16.05C13.84 16.31 14.3 16.46 14.66 16.57C15.26 16.76 15.79 16.74 16.22 16.67C16.7 16.6 17.7 16.07 17.91 15.49C18.12 14.9 18.12 14.4 18.06 14.3C18 14.2 17.84 14.13 17.6 14.02C17.36 13.9 16.17 13.31 15.95 13.23C15.73 13.15 15.57 13.11 15.4 13.35C15.24 13.6 14.76 14.16 14.61 14.33C14.47 14.5 14.32 14.52 14.08 14.4C13.84 14.28 12.87 13.96 11.72 12.93C10.82 12.13 10.22 11.14 10.1 10.93C9.97 10.73 10.08 10.61 10.2 10.49C10.31 10.38 10.45 10.2 10.57 10.06C10.69 9.92 10.73 9.82 10.81 9.66C10.89 9.5 10.85 9.35 10.79 9.23C10.73 9.11 10.24 7.92 10.04 7.43C9.84 6.95 9.64 7.02 9.49 7.02C9.35 7.01 9.53 7.34 9.53 7.34Z"></path></svg></a></div></aside><script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const reveals = document.querySelectorAll('.reveal-init');
-    const observer = new IntersectionObserver((entries, obs) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('reveal-visible');
-          obs.unobserve(entry.target);
+</div>
+<!-- DİNAMİK TAKVİM & AJANDA BÖLÜMÜ (RESPONSIVE) -->
+<section class="w-full max-w-[1280px] mx-auto px-4 md:px-margin mb-space-3xl" id="akademik-takvim-alani">
+  <div class="flex flex-col lg:flex-row gap-space-xl items-start">
+    <div class="w-full lg:w-2/3">
+      <!-- Smart Dynamic Calendar & Speaking Agenda Widget -->
+<section class="px-gutter-mobile mb-6" id="akademik-takvim">
+<div class="rounded-lg bg-surface-container-low p-4 shadow-sm">
+<!-- Calendar Header with Month Nav -->
+<div class="flex items-center justify-between mb-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[22px]">calendar_month</span>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold leading-tight" id="calendarMonthTitle">Kasım 2026</h2>
+<p class="font-label-md text-[11px] text-on-surface-variant">Akademi Takvimi &amp; Speaking Kulübü</p>
+</div>
+</div>
+<!-- Month Navigation Buttons -->
+<div class="flex items-center gap-1">
+<button aria-label="Önceki Ay" class="w-8 h-8 rounded-full bg-surface-container-lowest text-primary hover:bg-surface-container flex items-center justify-center transition-colors shadow-xs active:scale-95" id="prevMonthBtn" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<button class="px-2 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-md text-[11px] font-bold hover:bg-primary-container hover:text-white transition-colors" id="todayResetBtn" type="button">
+              Kasım '26
+            </button>
+<button aria-label="Sonraki Ay" class="w-8 h-8 rounded-full bg-surface-container-lowest text-primary hover:bg-surface-container flex items-center justify-center transition-colors shadow-xs active:scale-95" id="nextMonthBtn" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Interactive Mini Calendar Grid -->
+<div class="mb-4 bg-surface-container-lowest rounded-2xl p-3 shadow-xs">
+<!-- Weekday Labels -->
+<div class="grid grid-cols-7 gap-1 text-center font-label-md text-[11px] font-bold text-on-surface-variant mb-2">
+<span>Pzt</span><span>Sal</span><span>Çar</span><span>Per</span><span>Cum</span><span class="text-primary">Cmt</span><span class="text-tertiary">Paz</span>
+</div>
+<!-- Day Grid Cells (Rendered via JS) -->
+<div class="grid grid-cols-7 gap-1 text-center font-label-md text-[12px]" id="calendarDaysGrid"><div class="py-2 text-outline-variant text-[11px] opacity-40 select-none">26</div><div class="py-2 text-outline-variant text-[11px] opacity-40 select-none">27</div><div class="py-2 text-outline-variant text-[11px] opacity-40 select-none">28</div><div class="py-2 text-outline-variant text-[11px] opacity-40 select-none">29</div><div class="py-2 text-outline-variant text-[11px] opacity-40 select-none">30</div><div class="py-2 text-outline-variant text-[11px] opacity-40 select-none">31</div><button type="button" data-date="2026-11-01" class="relative py-1.5 flex flex-col items-center justify-center rounded-xl transition-all duration-150 active:scale-90 text-on-surface-variant hover:bg-surface-container-low"><span class="text-[12px] leading-tight">1</span><span class="h-1.5"></span></button><button type="button" data-date="2026-11-02" class="relative py-1.5 flex flex-col items-center justify-center rounded-xl transition-all duration-150 active:scale-90 text-on-surface-variant hover:bg-surface-container-low"><span class="text-[12px] leading-tight">2</span><span class="h-1.5"></span></button><button type="button" data-date="2026-11-03" class="relative py-1.5 flex flex-col items-center justify-center rounded-xl transition-all duration-150 active:scale-90 bg-surface-container font-bold text-on-surface hover:bg-secondary-fixed"><span class="text-[12px] leading-tight">3</span><span class="flex gap-0.5 mt-0.5 items-center justify-center"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span></span></button><button type="button" data-date="2026-11-04" class="relative py-1.5 flex flex-col items-center justify-center rounded-xl transition-all duration-150 active:scale-90 text-on-surface-variant hover:bg-surface-container-low"><span class="text-[12px] leading-tight">4</span><span class="h-1.5"></span></button><button type="button" data-date="2026-11-05" class="relative py-1.5 flex flex-col items-center justify-center rounded-xl transition-all duration-150 active:scale-90 bg-surface-container font-bold text-on-surface hover:bg-secondary-fixed"><span class="text-[12px] leading-tight">5</span><span class="flex gap-0.5 mt-0.5 items-center justify-center"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span></span></button><button type="button" data-date="2026-11-06" class="relative py-1.5 flex flex-col items-center justify-center rounded-xl transition-all duration-150 active:scale-90 text-on-surface-variant hover:bg-surface-container-low"><span class="text-[12px] leading-tight">6</span><span class="h-1.5"></span></button><button type="button" data-date="2026-11-07" class="relative py-1.5 flex flex-col items-center justify-center rounded-xl transition-all duration-150 active:scale-90 bg-primary text-white font-extrabold shadow-sm ring-2 ring-primary/30"><span class="text-[12px] leading-tight">7</span><span class="flex gap-0.5 mt-0.5 items-center justify-center"><span class="w-1.5 h-1.5 rounded-full bg-[#f7931e]"></span><span class="w-1.5 h-1.5 rounded-full bg-[#f7931e]"></span></span></button><button type="button" data-date="2026-11-08" class="relative py-1.5 flex flex-col items-center justify-center rounded-xl transition-all duration-150 active:scale-90 text-on-surface-variant hover:bg-surface-container-low"><span class="text-[12px] leading-tight">8</span><span class="h-1.5"></span></button><button type="button" data-date="2026-11-09" class="relative py-1.5 flex flex-col items-center justify-center rounded-xl transition-all duration-150 active:scale-90 text-on-surface-variant hover:bg-surface-container-low"><span class="text-[12px] leading-tight">9</span><span class="h-1.5"></span></button><button type="button" data-date="2026-11-10" class="relative py-1.5 flex flex-col items-center justify-center rounded-xl transition-all duration-150 active:scale-90 bg-surface-container font-bold text-on-surface hover:bg-secondary-fixed"><span class="text-[12px] leading-tight">10</span><span class="flex gap-0.5 mt-0.5 items-center justify-center"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span></span></button><button type="button" data-date="2026-11-11" class="relative py-1.5 flex flex-col items-center justify-center rounded-xl transition-all duration-150 active:scale-90 text-on-surface-variant hover:bg-surface-container-low"><span class="text-[12px] leading-tight">11</span><span class="h-1.5"></span></button><button type="button" data-date="2026-11-12" class="relative py-1.5 flex flex-col items-center justify-center rounded-xl transition-all duration-150 active:scale-90 bg-surface-container font-bold text-on-surface hover:bg-secondary-fixed"><span class="text-[12px] leading-tight">12</span><span class="flex gap-0.5 mt-0.5 items-center justify-center"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span></span></button><button type="button" data-date="2026-11-13" class="relative py-1.5 flex flex-col items-center justify-center rounded-xl transition-all duration-150 active:scale-90 text-on-surface-variant hover:bg-surface-container-low"><span class="text-[12px] leading-tight">13</span><span class="h-1.5"></span></button><button type="button" data-date="2026-11-14" class="relative py-1.5 flex flex-col items-center justify-center rounded-xl transition-all duration-150 active:scale-90 bg-surface-container font-bold text-on-surface hover:bg-secondary-fixed"><span class="text-[12px] leading-tight">14</span><span class="flex gap-0.5 mt-0.5 items-center justify-center"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span><span class="w-1.5 h-1.5 rounded-full bg-[#f7931e]"></span></span></button><button type="button" data-date="2026-11-15" class="relative py-1.5 flex flex-col items-center justify-center rounded-xl transition-all duration-150 active:scale-90 text-on-surface-variant hover:bg-surface-container-low"><span class="text-[12px] leading-tight">15</span><span class="h-1.5"></span></button><button type="button" data-date="2026-11-16" class="relative py-1.5 flex flex-col items-center justify-center rounded-xl transition-all duration-150 active:scale-90 text-on-surface-variant hover:bg-surface-container-low"><span class="text-[12px] leading-tight">16</span><span class="h-1.5"></span></button><button type="button" data-date="2026-11-17" class="relative py-1.5 flex flex-col items-center justify-center rounded-xl transition-all duration-150 active:scale-90 bg-surface-container font-bold text-on-surface hover:bg-secondary-fixed"><span class="text-[12px] leading-tight">17</span><span class="flex gap-0.5 mt-0.5 items-center justify-center"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span></span></button><button type="button" data-date="2026-11-18" class="relative py-1.5 flex flex-col items-center justify-center rounded-xl transition-all duration-150 active:scale-90 text-on-surface-variant hover:bg-surface-container-low"><span class="text-[12px] leading-tight">18</span><span class="h-1.5"></span></button><button type="button" data-date="2026-11-19" class="relative py-1.5 flex flex-col items-center justify-center rounded-xl transition-all duration-150 active:scale-90 bg-surface-container font-bold text-on-surface hover:bg-secondary-fixed"><span class="text-[12px] leading-tight">19</span><span class="flex gap-0.5 mt-0.5 items-center justify-center"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span></span></button><button type="button" data-date="2026-11-20" class="relative py-1.5 flex flex-col items-center justify-center rounded-xl transition-all duration-150 active:scale-90 text-on-surface-variant hover:bg-surface-container-low"><span class="text-[12px] leading-tight">20</span><span class="h-1.5"></span></button><button type="button" data-date="2026-11-21" class="relative py-1.5 flex flex-col items-center justify-center rounded-xl transition-all duration-150 active:scale-90 bg-surface-container font-bold text-on-surface hover:bg-secondary-fixed"><span class="text-[12px] leading-tight">21</span><span class="flex gap-0.5 mt-0.5 items-center justify-center"><span class="w-1.5 h-1.5 rounded-full bg-[#f7931e]"></span><span class="w-1.5 h-1.5 rounded-full bg-primary"></span></span></button><button type="button" data-date="2026-11-22" class="relative py-1.5 flex flex-col items-center justify-center rounded-xl transition-all duration-150 active:scale-90 text-on-surface-variant hover:bg-surface-container-low"><span class="text-[12px] leading-tight">22</span><span class="h-1.5"></span></button><button type="button" data-date="2026-11-23" class="relative py-1.5 flex flex-col items-center justify-center rounded-xl transition-all duration-150 active:scale-90 text-on-surface-variant hover:bg-surface-container-low"><span class="text-[12px] leading-tight">23</span><span class="h-1.5"></span></button><button type="button" data-date="2026-11-24" class="relative py-1.5 flex flex-col items-center justify-center rounded-xl transition-all duration-150 active:scale-90 bg-surface-container font-bold text-on-surface hover:bg-secondary-fixed"><span class="text-[12px] leading-tight">24</span><span class="flex gap-0.5 mt-0.5 items-center justify-center"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span></span></button><button type="button" data-date="2026-11-25" class="relative py-1.5 flex flex-col items-center justify-center rounded-xl transition-all duration-150 active:scale-90 text-on-surface-variant hover:bg-surface-container-low"><span class="text-[12px] leading-tight">25</span><span class="h-1.5"></span></button><button type="button" data-date="2026-11-26" class="relative py-1.5 flex flex-col items-center justify-center rounded-xl transition-all duration-150 active:scale-90 bg-surface-container font-bold text-on-surface hover:bg-secondary-fixed"><span class="text-[12px] leading-tight">26</span><span class="flex gap-0.5 mt-0.5 items-center justify-center"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span></span></button><button type="button" data-date="2026-11-27" class="relative py-1.5 flex flex-col items-center justify-center rounded-xl transition-all duration-150 active:scale-90 text-on-surface-variant hover:bg-surface-container-low"><span class="text-[12px] leading-tight">27</span><span class="h-1.5"></span></button><button type="button" data-date="2026-11-28" class="relative py-1.5 flex flex-col items-center justify-center rounded-xl transition-all duration-150 active:scale-90 bg-surface-container font-bold text-on-surface hover:bg-secondary-fixed"><span class="text-[12px] leading-tight">28</span><span class="flex gap-0.5 mt-0.5 items-center justify-center"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span><span class="w-1.5 h-1.5 rounded-full bg-[#f7931e]"></span></span></button><button type="button" data-date="2026-11-29" class="relative py-1.5 flex flex-col items-center justify-center rounded-xl transition-all duration-150 active:scale-90 text-on-surface-variant hover:bg-surface-container-low"><span class="text-[12px] leading-tight">29</span><span class="h-1.5"></span></button><button type="button" data-date="2026-11-30" class="relative py-1.5 flex flex-col items-center justify-center rounded-xl transition-all duration-150 active:scale-90 text-on-surface-variant hover:bg-surface-container-low"><span class="text-[12px] leading-tight">30</span><span class="h-1.5"></span></button></div>
+</div>
+<!-- Dynamic Selected Date Agenda Banner -->
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-lg text-label-lg font-bold text-on-surface flex items-center gap-1.5" id="selectedDateTitle">
+      <span class="material-symbols-outlined text-[18px] text-primary">event_upcoming</span>
+      <span>7 Kasım (Cumartesi)</span>
+    </span>
+<span class="text-[11px] px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-bold" id="selectedEventCount">2 Program</span>
+</div>
+<!-- Agenda Dynamic Items Container -->
+<div class="flex flex-col gap-2.5" id="calendarEventsContainer"><div class="flex items-center justify-between p-3 rounded-2xl bg-surface-container-lowest shadow-sm border border-surface-container/60 hover:border-primary/30 transition-all">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-secondary-fixed text-on-secondary-fixed flex flex-col items-center justify-center font-bold shrink-0">
+              <span class="text-[10px] uppercase font-label-md leading-none">Mün</span>
+              <span class="text-[11px] leading-tight font-extrabold mt-0.5">14:00</span>
+            </div>
+            <div class="flex flex-col">
+              <span class="font-label-lg text-label-lg text-on-surface font-bold leading-tight">Native Speaker ile 'Young Debaters'</span>
+              <span class="font-body-sm text-[12px] text-on-surface-variant flex items-center gap-1 mt-0.5">
+                <span class="material-symbols-outlined text-[13px]">location_on</span> Salon A • 14:00 - 15:30
+              </span>
+            </div>
+          </div>
+          <a href="https://wa.me/905444737693?text=Native%20Speaker%20ile%20'Young%20Debaters'%20kat%C4%B1l%C4%B1m%C4%B1%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors" title="Katıl / Bilgi Al">
+            <span class="material-symbols-outlined text-[18px]">add</span>
+          </a>
+        </div><div class="flex items-center justify-between p-3 rounded-2xl bg-surface-container-lowest shadow-sm border border-surface-container/60 hover:border-primary/30 transition-all">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-tertiary-fixed text-on-tertiary-fixed flex flex-col items-center justify-center font-bold shrink-0">
+              <span class="text-[10px] uppercase font-label-md leading-none">Sın</span>
+              <span class="text-[11px] leading-tight font-extrabold mt-0.5">16:00</span>
+            </div>
+            <div class="flex flex-col">
+              <span class="font-label-lg text-label-lg text-on-surface font-bold leading-tight">IELTS &amp; TOEFL Prep Clinic</span>
+              <span class="font-body-sm text-[12px] text-on-surface-variant flex items-center gap-1 mt-0.5">
+                <span class="material-symbols-outlined text-[13px]">location_on</span> Salon C • 16:00 - 17:30
+              </span>
+            </div>
+          </div>
+          <a href="https://wa.me/905444737693?text=IELTS%20%26%20TOEFL%20Prep%20Clinic%20kat%C4%B1l%C4%B1m%C4%B1%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors" title="Katıl / Bilgi Al">
+            <span class="material-symbols-outlined text-[18px]">add</span>
+          </a>
+        </div></div>
+</div>
+</section>
+
+    </div>
+    <div class="w-full lg:w-1/3 flex flex-col gap-space-md">
+      <!-- CTA Box: WhatsApp Broadcast Channel -->
+<section class="px-gutter-mobile mb-4">
+<div class="relative overflow-hidden rounded-lg bg-gradient-to-br from-[#25D366]/15 via-surface-container to-primary-fixed/20 p-5 shadow-sm flex flex-col items-center text-center">
+<div class="w-12 h-12 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-md mb-2">
+<svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+<path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"></path>
+</svg>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-extrabold">
+        WhatsApp Duyuru Kanalımız
+      </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-xs mt-1 mb-4">
+        Ders saatleri, ani tatil güncellemeleri ve speaking programlarını anında telefonunuza alın.
+      </p>
+<a class="w-full h-12 rounded-full bg-[#25D366] text-white font-label-lg text-label-lg font-bold flex items-center justify-center gap-2 shadow-md active:scale-98 transition-transform shadow-xl" href="https://wa.me/905444737693?text=W%20Akademi%20Duyuru%20Kanalina%20Katilmak%20Istiyorum" rel="noopener noreferrer" target="_blank">
+<svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+<path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"></path>
+</svg>
+<span>Duyuru Kanalına Katıl</span>
+</a>
+</div>
+</section>
+
+    </div>
+  </div>
+</section>
+<script>
+  // Simple Pill Filter Logic
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const cards = document.querySelectorAll('.announcement-card');
+
+  filterButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterButtons.forEach(b => {
+        b.classList.remove('bg-primary', 'text-on-primary');
+        b.classList.add('bg-surface-container', 'text-on-surface-variant');
+      });
+      btn.classList.remove('bg-surface-container', 'text-on-surface-variant');
+      btn.classList.add('bg-primary', 'text-on-primary');
+
+      const targetCategory = btn.getAttribute('data-category');
+
+      cards.forEach(card => {
+        const cardCategory = card.getAttribute('data-category');
+        if (targetCategory === 'all' || cardCategory === targetCategory) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
         }
       });
-    }, {
-      root: null,
-      threshold: 0.12,
-      rootMargin: '0px 0px -40px 0px'
     });
-    reveals.forEach(el => observer.observe(el));
   });
-</script></body></html>
+
+  // Expand / Collapse Details
+  function toggleDetails(button) {
+    const card = button.closest('.announcement-card');
+    const details = card.querySelector('.card-details');
+    const icon = button.querySelector('.material-symbols-outlined');
+    
+    if (details.classList.contains('hidden')) {
+      details.classList.remove('hidden');
+      icon.style.transform = 'rotate(180deg)';
+      button.querySelector('span:first-child').textContent = 'Kapat';
+    } else {
+      details.classList.add('hidden');
+      icon.style.transform = 'rotate(0deg)';
+      button.querySelector('span:first-child').textContent = 'Detayları İncele';
+    }
+  }
+
+  // --- SMART DYNAMIC CALENDAR COMPONENT (Defaulting to November 2026) ---
+  const monthNamesTr = [
+    "Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran",
+    "Temmuz", "Ağustos", "Eylül", "Ekim", "Kasım", "Aralık"
+  ];
+  const dayNamesTr = [
+    "Pazar", "Pazartesi", "Salı", "Çarşamba", "Perşembe", "Cuma", "Cumartesi"
+  ];
+
+  // Specific events database with focus on November 2026
+  const eventsDatabase = {
+    // 2026-11
+    "2026-11-03": [
+      { type: "speaking", title: "Kids Conversation (A1-A2)", time: "17:00 - 18:00", place: "Speaking Lounge", tag: "Speaking", color: "primary" }
+    ],
+    "2026-11-05": [
+      { type: "speaking", title: "Teens Global Chat (B1)", time: "18:30 - 19:30", place: "Sanal & Kampüs", tag: "Speaking", color: "secondary" }
+    ],
+    "2026-11-07": [
+      { type: "speaking", title: "Native Speaker ile 'Young Debaters'", time: "14:00 - 15:30", place: "Salon A", tag: "Münazara", color: "secondary" },
+      { type: "speaking", title: "IELTS & TOEFL Prep Clinic", time: "16:00 - 17:30", place: "Salon C", tag: "Sınav Hazırlık", color: "tertiary" }
+    ],
+    "2026-11-10": [
+      { type: "speaking", title: "Kids Storytelling Hour (A1)", time: "17:00 - 18:00", place: "Etkinlik Salonu", tag: "Speaking", color: "primary" }
+    ],
+    "2026-11-12": [
+      { type: "speaking", title: "Teens British Debate Club", time: "18:30 - 19:30", place: "Kütüphane", tag: "Speaking", color: "secondary" }
+    ],
+    "2026-11-14": [
+      { type: "akademik", title: "Cambridge Young Learners (YLE) Deneme Sınavı", time: "10:30 - 13:00", place: "Derslik 4", tag: "Sınav", color: "primary" },
+      { type: "speaking", title: "IELTS Speaking Simülasyonu", time: "14:00 - 16:00", place: "Salon B", tag: "Akademik", color: "tertiary" }
+    ],
+    "2026-11-17": [
+      { type: "speaking", title: "Kids Board Game English Night", time: "17:00 - 18:15", place: "Oyun Alanı", tag: "Speaking", color: "primary" }
+    ],
+    "2026-11-19": [
+      { type: "speaking", title: "Teens Ted-Ed Talk & Debate", time: "18:30 - 19:45", place: "Konferans Salonu", tag: "Speaking", color: "secondary" }
+    ],
+    "2026-11-21": [
+      { type: "etkinlik", title: "İngilizce Masal & Drama Atölyesi (7-11 Yaş)", time: "11:30 - 13:00", place: "Ana Kampüs", tag: "Atölye", color: "tertiary" },
+      { type: "speaking", title: "Akademik Sunum & Telaffuz Kliniği", time: "14:30 - 16:00", place: "Derslik 2", tag: "Speaking", color: "secondary" }
+    ],
+    "2026-11-24": [
+      { type: "etkinlik", title: "Öğretmenler Günü Özel Speaking Yarışması", time: "17:00 - 18:30", place: "Tüm Kampüs", tag: "Özel Etkinlik", color: "primary" }
+    ],
+    "2026-11-26": [
+      { type: "speaking", title: "Teens Global Chat (B1-B2)", time: "18:30 - 19:30", place: "Salon A", tag: "Speaking", color: "secondary" }
+    ],
+    "2026-11-28": [
+      { type: "kayit", title: "Yeni Dönem Seviye Belirleme & Birebir Tanışma", time: "10:00 - 17:00", place: "Tüm Şubeler", tag: "Kayıt", color: "primary" },
+      { type: "speaking", title: "Haftalık Speaking Kapanış Oturumu", time: "13:00 - 14:30", place: "Bahçe Lounge", tag: "Speaking", color: "tertiary" }
+    ]
+  };
+
+  // State
+  let currentYear = 2026;
+  let currentMonth = 10; // 0-indexed: 10 = November
+  let selectedDateString = "2026-11-07"; // default selected day with exciting event
+
+  const monthTitleEl = document.getElementById('calendarMonthTitle');
+  const daysGridEl = document.getElementById('calendarDaysGrid');
+  const eventsContainerEl = document.getElementById('calendarEventsContainer');
+  const selectedDateTitleEl = document.getElementById('selectedDateTitle');
+  const selectedEventCountEl = document.getElementById('selectedEventCount');
+  const prevMonthBtn = document.getElementById('prevMonthBtn');
+  const nextMonthBtn = document.getElementById('nextMonthBtn');
+  const todayResetBtn = document.getElementById('todayResetBtn');
+
+  function renderCalendar() {
+    monthTitleEl.textContent = `${monthNamesTr[currentMonth]} ${currentYear}`;
+    daysGridEl.innerHTML = '';
+
+    // First day of month
+    const firstDayIndex = new Date(currentYear, currentMonth, 1).getDay();
+    // In Turkish calendar Monday is 1, Sunday is 0 -> adjust to Monday-first (0 = Monday, 6 = Sunday)
+    const startingDay = (firstDayIndex + 6) % 7; 
+    const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
+
+    // Days in previous month
+    const prevMonthDays = new Date(currentYear, currentMonth, 0).getDate();
+
+    // Fill leading empty/prev month slots
+    for (let i = startingDay - 1; i >= 0; i--) {
+      const dayNum = prevMonthDays - i;
+      const cell = document.createElement('div');
+      cell.className = 'py-2 text-outline-variant text-[11px] opacity-40 select-none';
+      cell.textContent = dayNum;
+      daysGridEl.appendChild(cell);
+    }
+
+    // Fill current month days
+    for (let day = 1; day <= daysInMonth; day++) {
+      const monthStr = String(currentMonth + 1).padStart(2, '0');
+      const dayStr = String(day).padStart(2, '0');
+      const dateKey = `${currentYear}-${monthStr}-${dayStr}`;
+      const dayEvents = eventsDatabase[dateKey] || [];
+      const hasEvents = dayEvents.length > 0;
+      const isSelected = selectedDateString === dateKey;
+
+      const cell = document.createElement('button');
+      cell.type = 'button';
+      cell.setAttribute('data-date', dateKey);
+
+      let baseClasses = 'relative py-1.5 flex flex-col items-center justify-center rounded-xl transition-all duration-150 active:scale-90 ';
+      if (isSelected) {
+        baseClasses += 'bg-primary text-white font-extrabold shadow-sm ring-2 ring-primary/30';
+      } else if (hasEvents) {
+        baseClasses += 'bg-surface-container font-bold text-on-surface hover:bg-secondary-fixed';
+      } else {
+        baseClasses += 'text-on-surface-variant hover:bg-surface-container-low';
+      }
+
+      cell.className = baseClasses;
+      
+      const numSpan = document.createElement('span');
+      numSpan.className = 'text-[12px] leading-tight';
+      numSpan.textContent = day;
+      cell.appendChild(numSpan);
+
+      // Event indicator dots
+      if (hasEvents) {
+        const dotContainer = document.createElement('span');
+        dotContainer.className = 'flex gap-0.5 mt-0.5 items-center justify-center';
+        
+        dayEvents.slice(0, 2).forEach(ev => {
+          const dot = document.createElement('span');
+          dot.className = `w-1.5 h-1.5 rounded-full ${isSelected ? 'bg-[#f7931e]' : (ev.color === 'tertiary' ? 'bg-[#f7931e]' : 'bg-primary')}`;
+          dotContainer.appendChild(dot);
+        });
+        cell.appendChild(dotContainer);
+      } else {
+        const placeholder = document.createElement('span');
+        placeholder.className = 'h-1.5';
+        cell.appendChild(placeholder);
+      }
+
+      cell.addEventListener('click', () => {
+        selectedDateString = dateKey;
+        renderCalendar();
+        renderEventsForDate(dateKey);
+      });
+
+      daysGridEl.appendChild(cell);
+    }
+
+    // Auto load events for current selected date or fallback to month view
+    renderEventsForDate(selectedDateString);
+  }
+
+  function renderEventsForDate(dateKey) {
+    eventsContainerEl.innerHTML = '';
+    const events = eventsDatabase[dateKey] || [];
+    const dateObj = new Date(dateKey);
+    const dayOfMonth = dateObj.getDate();
+    const dayName = dayNamesTr[dateObj.getDay()];
+    const monthName = monthNamesTr[dateObj.getMonth()];
+
+    selectedDateTitleEl.innerHTML = `
+      <span class="material-symbols-outlined text-[18px] text-primary">event_upcoming</span>
+      <span>${dayOfMonth} ${monthName} (${dayName})</span>
+    `;
+
+    if (events.length > 0) {
+      selectedEventCountEl.textContent = `${events.length} Program`;
+      selectedEventCountEl.className = 'text-[11px] px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-bold';
+
+      events.forEach(ev => {
+        const item = document.createElement('div');
+        item.className = 'flex items-center justify-between p-3 rounded-2xl bg-surface-container-lowest shadow-sm border border-surface-container/60 hover:border-primary/30 transition-all';
+        
+        let badgeColorClass = 'bg-surface-container text-primary';
+        let dotColorClass = 'bg-primary';
+        if (ev.color === 'tertiary') {
+          badgeColorClass = 'bg-tertiary-fixed text-on-tertiary-fixed';
+          dotColorClass = 'bg-[#f7931e]';
+        } else if (ev.color === 'secondary') {
+          badgeColorClass = 'bg-secondary-fixed text-on-secondary-fixed';
+          dotColorClass = 'bg-secondary';
+        }
+
+        item.innerHTML = `
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl ${badgeColorClass} flex flex-col items-center justify-center font-bold shrink-0">
+              <span class="text-[10px] uppercase font-label-md leading-none">${ev.tag.slice(0, 3)}</span>
+              <span class="text-[11px] leading-tight font-extrabold mt-0.5">${ev.time.split(' ')[0]}</span>
+            </div>
+            <div class="flex flex-col">
+              <span class="font-label-lg text-label-lg text-on-surface font-bold leading-tight">${ev.title}</span>
+              <span class="font-body-sm text-[12px] text-on-surface-variant flex items-center gap-1 mt-0.5">
+                <span class="material-symbols-outlined text-[13px]">location_on</span> ${ev.place} • ${ev.time}
+              </span>
+            </div>
+          </div>
+          <a href="https://wa.me/905444737693?text=${encodeURIComponent(ev.title + ' katılımı hakkında bilgi almak istiyorum')}" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors" title="Katıl / Bilgi Al">
+            <span class="material-symbols-outlined text-[18px]">add</span>
+          </a>
+        `;
+        eventsContainerEl.appendChild(item);
+      });
+    } else {
+      selectedEventCountEl.textContent = 'Etkinlik Yok';
+      selectedEventCountEl.className = 'text-[11px] px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-medium';
+
+      const empty = document.createElement('div');
+      empty.className = 'p-4 rounded-2xl bg-surface-container-lowest text-center flex flex-col items-center justify-center gap-1 text-on-surface-variant';
+      empty.innerHTML = `
+        <span class="material-symbols-outlined text-outline text-[24px]">event_available</span>
+        <span class="font-label-md text-label-md text-on-surface font-semibold">Bu tarihte açık oturum planlanmamıştır</span>
+        <p class="text-[11px] text-on-surface-variant max-w-xs">Birebir etüt veya seviye tespit randevusu oluşturmak için danışmanlarımızla iletişime geçebilirsiniz.</p>
+        <a href="https://wa.me/905444737693?text=Birebir%20Seviye%20Tespit%20Randevusu" target="_blank" rel="noopener noreferrer" class="mt-2 text-xs font-bold text-primary inline-flex items-center gap-1">
+          <span>Özel Randevu Talep Et</span>
+          <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+        </a>
+      `;
+      eventsContainerEl.appendChild(empty);
+    }
+  }
+
+  // Month navigation handlers
+  prevMonthBtn.addEventListener('click', () => {
+    currentMonth--;
+    if (currentMonth < 0) {
+      currentMonth = 11;
+      currentYear--;
+    }
+    // select 1st of month by default
+    selectedDateString = `${currentYear}-${String(currentMonth + 1).padStart(2, '0')}-01`;
+    renderCalendar();
+  });
+
+  nextMonthBtn.addEventListener('click', () => {
+    currentMonth++;
+    if (currentMonth > 11) {
+      currentMonth = 0;
+      currentYear++;
+    }
+    selectedDateString = `${currentYear}-${String(currentMonth + 1).padStart(2, '0')}-01`;
+    renderCalendar();
+  });
+
+  todayResetBtn.addEventListener('click', () => {
+    currentYear = 2026;
+    currentMonth = 10; // November
+    selectedDateString = "2026-11-07";
+    renderCalendar();
+  });
+
+  // Initialize Calendar on load
+  document.addEventListener('DOMContentLoaded', () => {
+    renderCalendar();
+  });
+  renderCalendar();
+</script></main>
+
+<footer class="w-full relative bg-inverse-surface text-inverse-on-surface overflow-hidden pt-space-2xl pb-space-xl mt-space-3xl">
+  <div class="absolute top-0 left-0 right-0 h-8 bg-surface rounded-b-[40px]"></div>
+  <div class="max-w-[1280px] mx-auto px-margin pt-space-xl">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-2xl pb-space-2xl">
+      <div class="flex flex-col gap-space-md">
+        <div class="flex items-center gap-space-sm">
+          <div class="p-1 bg-surface-container-lowest rounded-full inline-flex">
+            <img alt="W Language Academy Logo" class="w-10 h-10 rounded-full object-contain" src="assets/images/logo-kids.png">
+          </div>
+          <span class="font-headline-sm text-headline-sm text-inverse-on-surface font-bold">W Language Academy</span>
+        </div>
+        <p class="font-accent-script-highlight text-body-lg text-secondary-fixed-dim italic leading-snug">Learn · Speak · Grow</p>
+        <p class="font-body-sm text-body-sm text-outline-variant">Your Language Partner! Çocuklar ve gençler için yenilikçi, neşeli ve iletişim odaklı dil öğrenme yolculuğu.</p>
+      </div>
+      <div class="flex flex-col gap-space-md">
+        <span class="font-label-lg text-label-lg text-tertiary-fixed tracking-wider uppercase font-bold">Hızlı Bağlantılar</span>
+        <ul class="flex flex-col gap-space-sm">
+          <li class="leading-none"><a class="font-body-sm text-body-sm text-outline-variant hover:text-surface-container-lowest transition-colors" href="index.html">Anasayfa</a></li>
+          <li class="leading-none"><a class="font-body-sm text-body-sm text-outline-variant hover:text-surface-container-lowest transition-colors" href="hakkimizda.html">Hakkımızda</a></li>
+          <li class="leading-none"><a class="font-body-sm text-body-sm text-outline-variant hover:text-surface-container-lowest transition-colors" href="programlar.html">Programlar</a></li>
+          <li class="leading-none"><a class="font-body-sm text-body-sm text-outline-variant hover:text-surface-container-lowest transition-colors" href="nasil-calisiyoruz.html">Nasıl Çalışıyoruz</a></li>
+          <li class="leading-none"><a class="font-body-sm text-body-sm text-outline-variant hover:text-surface-container-lowest transition-colors" href="basarilar.html">Başarı Hikayeleri</a></li>
+          <li class="leading-none"><a class="font-body-sm text-body-sm text-outline-variant hover:text-surface-container-lowest transition-colors" href="duyurular.html">Duyurular &amp; Etkinlikler</a></li>
+          <li class="leading-none"><a class="font-body-sm text-body-sm text-outline-variant hover:text-surface-container-lowest transition-colors" href="iletisim.html">İletişim</a></li>
+        </ul>
+      </div>
+      <div class="flex flex-col gap-space-md">
+        <span class="font-label-lg text-label-lg text-tertiary-fixed tracking-wider uppercase font-bold">Yasal &amp; Güvenlik</span>
+        <ul class="flex flex-col gap-space-sm">
+          <li class="leading-none"><a class="font-body-sm text-body-sm text-outline-variant hover:text-surface-container-lowest transition-colors" href="#">Kullanım Koşulları</a></li>
+          <li class="leading-none"><a class="font-body-sm text-body-sm text-outline-variant hover:text-surface-container-lowest transition-colors" href="#">Gizlilik ve Aydınlatma Metni</a></li>
+          <li class="leading-none"><a class="font-body-sm text-body-sm text-outline-variant hover:text-surface-container-lowest transition-colors" href="#">Çerez Bildirimi</a></li>
+          <li class="leading-none"><a class="font-body-sm text-body-sm text-outline-variant hover:text-surface-container-lowest transition-colors" href="#">Açık Rıza Metni</a></li>
+        </ul>
+      </div>
+      <div class="flex flex-col gap-space-md">
+        <span class="font-label-lg text-label-lg text-tertiary-fixed tracking-wider uppercase font-bold">Bize Ulaşın</span>
+        <p class="font-body-sm text-body-sm text-outline-variant">Sorularınız ve erken kayıt avantajları için hemen bir danışmanımızla görüşün.</p>
+        <div class="flex items-center gap-space-sm pt-space-xs">
+          <a aria-label="Instagram" class="w-10 h-10 rounded-full bg-secondary/30 flex items-center justify-center hover:bg-secondary-container hover:text-on-secondary-container transition-all hover:scale-110" href="https://www.instagram.com/wlanguageacademy/" rel="noopener noreferrer" target="_blank">
+            <span class="material-symbols-outlined text-[20px]">photo_camera</span>
+          </a>
+          <a aria-label="E-posta" class="w-10 h-10 rounded-full bg-secondary/30 flex items-center justify-center hover:bg-secondary-container hover:text-on-secondary-container transition-all hover:scale-110" href="mailto:wlanguageacademy@gmail.com">
+            <span class="material-symbols-outlined text-[20px]">mail</span>
+          </a>
+          <a aria-label="Telefon" class="w-10 h-10 rounded-full bg-secondary/30 flex items-center justify-center hover:bg-secondary-container hover:text-on-secondary-container transition-all hover:scale-110" href="tel:05444737693">
+            <span class="material-symbols-outlined text-[20px]">call</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md border-t border-white/10">
+      <span class="font-body-sm text-body-sm text-outline-variant text-center md:text-left">© 2026 W Language Academy. Tüm hakları saklıdır.</span>
+      <div class="flex items-center gap-space-xs">
+        <span class="font-label-md text-label-md px-space-md py-space-xs bg-surface-container-highest/20 rounded-full text-secondary-fixed">English &amp; Global Languages</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<aside aria-label="Hızlı İletişim Kanalları" class="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">
+  <div class="flex items-center gap-space-xs group">
+    <span class="hidden sm:inline-flex items-center px-space-md py-1.5 rounded-full bg-surface-container-lowest/95 backdrop-blur-md shadow-lg text-on-surface font-label-md text-label-md font-bold transition-all duration-300 opacity-90 group-hover:opacity-100 group-hover:scale-105 pointer-events-none border border-surface-container-high">Instagram'da Takip Edin</span>
+    <a aria-label="Instagram ile İletişime Geç" class="w-12 h-12 rounded-full flex items-center justify-center shadow-xl transition-all duration-300 hover:scale-110 active:scale-95 text-white bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7]" href="https://www.instagram.com/wlanguageacademy/" rel="noopener noreferrer" target="_blank">
+      <svg class="w-6 h-6 fill-current drop-shadow-sm" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+    </a>
+  </div>
+  <div class="flex items-center gap-space-xs group">
+    <span class="hidden sm:inline-flex items-center px-space-md py-1.5 rounded-full bg-surface-container-lowest/95 backdrop-blur-md shadow-xl text-on-surface font-label-md text-label-md font-bold transition-all duration-300 opacity-90 group-hover:opacity-100 group-hover:scale-105 pointer-events-none border border-surface-container-high"><span class="w-2 h-2 rounded-full bg-[#25D366] mr-2 animate-ping"></span>WhatsApp ile İletişime Geç</span>
+    <a aria-label="WhatsApp ile İletişime Geç" class="relative w-14 h-14 rounded-full flex items-center justify-center shadow-2xl transition-all duration-300 hover:scale-110 active:scale-95 bg-[#25D366] text-white" href="https://wa.me/905444737693" rel="noopener noreferrer" target="_blank">
+      <span class="absolute inset-0 rounded-full animate-ping opacity-30 pointer-events-none bg-[#25D366]"></span>
+      <svg class="w-8 h-8 fill-current drop-shadow-sm" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.81 13.47 3.81 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.53 7.34C9.36 7.34 9.09 7.4 8.87 7.65C8.64 7.89 8 8.49 8 9.72C8 10.95 8.89 12.14 9.02 12.3C9.14 12.47 10.77 14.97 13.25 16.05C13.84 16.31 14.3 16.46 14.66 16.57C15.26 16.76 15.79 16.74 16.22 16.67C16.7 16.6 17.7 16.07 17.91 15.49C18.12 14.9 18.12 14.4 18.06 14.3C18 14.2 17.84 14.13 17.6 14.02C17.36 13.9 16.17 13.31 15.95 13.23C15.73 13.15 15.57 13.11 15.4 13.35C15.24 13.6 14.76 14.16 14.61 14.33C14.47 14.5 14.32 14.52 14.08 14.4C13.84 14.28 12.87 13.96 11.72 12.93C10.82 12.13 10.22 11.14 10.1 10.93C9.97 10.73 10.08 10.61 10.2 10.49C10.31 10.38 10.45 10.2 10.57 10.06C10.69 9.92 10.73 9.82 10.81 9.66C10.89 9.5 10.85 9.35 10.79 9.23C10.73 9.11 10.24 7.92 10.04 7.43C9.84 6.95 9.64 7.02 9.49 7.02C9.35 7.01 9.53 7.34 9.53 7.34Z"></path></svg>
+    </a>
+  </div>
+</aside>
+</body>
+</html>
