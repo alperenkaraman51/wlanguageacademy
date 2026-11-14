@@ -1,0 +1,864 @@
+﻿<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="tr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>
+  @layer base {
+    html, body { margin: 0; padding: 0; }
+    body { overscroll-behavior: none; }
+    main > :first-child { margin-top: 0 !important; }
+    main > :last-child { margin-bottom: 0 !important; }
+  }
+  ::-webkit-scrollbar { display: none; }
+
+  @keyframes marquee {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-50%); }
+  }
+  .animate-marquee {
+    display: flex;
+    width: max-content;
+    animation: marquee 26s linear infinite;
+  }
+  .animate-marquee:hover {
+    animation-play-state: paused;
+  }
+
+  @keyframes floating {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-9px) rotate(1deg); }
+  }
+  .animate-float {
+    animation: floating 4.5s ease-in-out infinite;
+  }
+  .animate-float-delayed {
+    animation: floating 5.2s ease-in-out 1.5s infinite;
+  }
+
+  @keyframes glow {
+    0%, 100% { opacity: 0.4; transform: scale(1); }
+    50% { opacity: 0.7; transform: scale(1.06); }
+  }
+  .animate-glow {
+    animation: glow 6s ease-in-out infinite;
+  }
+
+  .reveal-init {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .reveal-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .mascot-blend {
+    mix-blend-mode: multiply;
+  }
+</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"primary":"#621bcb","on-background":"#300248","on-surface-variant":"#4a4454","surface-tint":"#7334db","secondary":"#80449f","surface":"#fff7fc","surface-bright":"#fff7fc","outline":"#7b7486","on-tertiary":"#ffffff","on-tertiary-fixed-variant":"#6b3b00","on-primary-fixed":"#25005a","tertiary-container":"#985600","on-error-container":"#93000a","surface-container":"#fbe8ff","outline-variant":"#ccc3d7","on-secondary":"#ffffff","on-primary":"#ffffff","on-surface":"#300248","secondary-fixed-dim":"#e8b3ff","on-tertiary-fixed":"#2d1600","secondary-fixed":"#f6d9ff","primary-container":"#7b3fe4","surface-container-low":"#feefff","on-secondary-fixed-variant":"#662b85","inverse-surface":"#471c5f","on-secondary-fixed":"#310049","error-container":"#ffdad6","on-primary-fixed-variant":"#5a06c3","on-error":"#ffffff","tertiary-fixed-dim":"#ffb875","on-tertiary-container":"#ffdfc6","surface-container-lowest":"#ffffff","primary-fixed":"#eaddff","inverse-primary":"#d3bbff","secondary-container":"#df9cfe","surface-container-high":"#f8e0ff","tertiary":"#764100","primary-fixed-dim":"#d3bbff","tertiary-fixed":"#ffdcc0","error":"#ba1a1a","background":"#fff7fc","on-primary-container":"#ede0ff","surface-container-highest":"#f5d9ff","surface-dim":"#f1ceff","surface-variant":"#f5d9ff","on-secondary-container":"#672b86","inverse-on-surface":"#fcebff"},"borderRadius":{"DEFAULT":"1rem","lg":"2rem","xl":"3rem","full":"9999px"},"spacing":{"space-3xl":"4.5rem","space-md":"1rem","gutter-mobile":"1rem","space-lg":"1.5rem","space-xl":"2rem","margin":"3rem","gutter":"1.5rem","space-xs":"0.25rem","space-sm":"0.5rem","margin-mobile":"1.25rem","space-2xl":"3rem"},"fontFamily":{"headline-lg":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"display-hero":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"accent-script-highlight":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"display-hero-mobile":["Plus Jakarta Sans"],"label-lg":["Plus Jakarta Sans"]},"fontSize":{"headline-lg":["40px",{"lineHeight":"48px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-md":["16px",{"lineHeight":"24px","fontWeight":"400"}],"display-hero":["56px",{"lineHeight":"64px","letterSpacing":"-0.03em","fontWeight":"800"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.04em","fontWeight":"700"}],"headline-lg-mobile":["28px",{"lineHeight":"36px","letterSpacing":"-0.01em","fontWeight":"700"}],"headline-md":["28px",{"lineHeight":"36px","fontWeight":"700"}],"accent-script-highlight":["40px",{"lineHeight":"48px","letterSpacing":"0.01em","fontWeight":"700"}],"headline-sm":["22px",{"lineHeight":"30px","fontWeight":"600"}],"body-sm":["14px",{"lineHeight":"20px","fontWeight":"500"}],"body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}],"display-hero-mobile":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"800"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.02em","fontWeight":"700"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary selection:text-white"><header class="fixed top-0 left-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_14px_34px_-6px_rgba(123,63,228,0.08)] transition-all duration-300"><div class="h-20 max-w-[1280px] mx-auto px-margin flex items-center justify-between gap-space-md"><a class="flex items-center gap-space-sm group cursor-pointer" data-path="anasayfa" href="#anasayfa"><div class="p-space-xs bg-surface-container rounded-full flex items-center justify-center transition-transform group-hover:scale-105"><img alt="W Language Academy Logo" class="w-10 h-10 rounded-full object-cover" src="images/logo-kids.png"/></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary tracking-tight leading-none group-hover:text-primary-container transition-colors">W Language Academy</span><span class="font-label-md text-label-md text-secondary uppercase tracking-widest">Language School</span></div></a><nav class="hidden xl:flex items-center gap-space-xs bg-surface-container-low px-space-md py-space-xs rounded-full shadow-[0_2px_8px_rgba(91,31,122,0.04)] whitespace-nowrap" data-active-classes="bg-primary-container text-on-primary-container font-label-lg font-bold"><a class="font-label-lg text-label-lg px-space-md py-space-xs rounded-full text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="anasayfa" href="#anasayfa">Anasayfa</a><a class="font-label-lg text-label-lg px-space-md py-space-xs rounded-full text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="hakkimizda" href="hakkimizda.html">Hakkımızda</a><a class="font-label-lg text-label-lg px-space-md py-space-xs rounded-full text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="programlar" href="programlar.html">Programlar</a><a class="font-label-lg text-label-lg px-space-md py-space-xs rounded-full text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all whitespace-nowrap" data-path="nasil-calisiyoruz" href="nasil-calisiyoruz.html">Nasıl Çalışıyoruz</a><a aria-current="page" class="px-space-md py-space-xs rounded-full transition-all bg-primary-container text-on-primary-container font-label-lg font-bold" data-path="basarilar" href="basarilar.html">Başarılar</a><a class="font-label-lg text-label-lg px-space-md py-space-xs rounded-full text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="duyurular" href="duyurular.html">Duyurular</a><a class="font-label-lg text-label-lg px-space-md py-space-xs rounded-full text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="iletisim" href="iletisim.html">İletişim</a></nav><div class="flex items-center gap-space-sm shrink-0"><a aria-label="Instagram" class="w-10 h-10 rounded-full bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] text-white flex items-center justify-center shadow-md hover:shadow-lg transition-all hover:scale-110 hover:-translate-y-0.5 group shrink-0" href="https://www.instagram.com/wlanguageacademy/" rel="noopener noreferrer" target="_blank"><svg class="w-5 h-5 fill-current transition-transform group-hover:scale-105" viewbox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg></a><a class="group inline-flex items-center gap-space-xs px-space-lg py-2.5 rounded-full bg-primary hover:bg-inverse-surface text-on-primary font-label-lg whitespace-nowrap shadow-[0_14px_34px_-6px_rgba(123,63,228,0.25)] transition-all hover:-translate-y-0.5 active:translate-y-0 shrink-0 cursor-pointer" data-path="on-kayit" href="index.html#on-kayit"><span class="leading-none">Ön Kayıt</span><span class="material-symbols-outlined bg-tertiary-container text-on-tertiary p-space-xs rounded-full text-[16px] transition-transform group-hover:translate-x-1">arrow_forward</span></a></div></div></header><main class="w-full pt-20 bg-surface min-h-[calc(100vh-80px)]"><div class="flex flex-col w-full">
+<!-- Breadcrumb & Header Hero -->
+<section class="relative w-full pt-10 pb-16 px-4 md:px-margin bg-surface-container-low overflow-hidden">
+<!-- Ambient Lilac Glows -->
+<div class="absolute -top-24 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-primary-container/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute -bottom-20 right-10 w-80 h-80 bg-secondary-container/20 rounded-full blur-2xl pointer-events-none"></div>
+<div class="max-w-[1280px] mx-auto flex flex-col items-center text-center relative z-10">
+<!-- Breadcrumb -->
+<nav aria-label="Breadcrumb" class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-surface-container text-secondary text-label-md font-label-md shadow-sm mb-6">
+<a class="hover:text-primary transition-colors" href="#anasayfa">Anasayfa</a>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-on-surface-variant">Kurumsal</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-primary font-bold">Başarılar</span>
+</nav>
+<!-- Badge & Titles -->
+<div class="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed text-label-md font-label-md uppercase tracking-wider mb-4 shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-primary" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+<span>Kanıtlanmış Akademik Mükemmeliyet</span>
+</div>
+<h1 class="font-display-hero text-display-hero text-on-surface max-w-4xl tracking-tight mb-4">
+        Başarılarımız &amp; Veli Yorumları
+      </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl leading-relaxed">
+        Cambridge İngilizce Sınavlarında %98 Başarı Oranı ve Öğrencilerimizin İlham Veren Gelişim Hikayeleri
+      </p>
+<!-- Decorative sparkle row -->
+<div class="flex items-center gap-3 mt-6 text-tertiary-container">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">hotel_class</span>
+<span class="h-1 w-12 bg-outline-variant/60 rounded-full"></span>
+<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">award_star</span>
+<span class="h-1 w-12 bg-outline-variant/60 rounded-full"></span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">hotel_class</span>
+</div>
+</div>
+</section>
+<!-- Section 1: Key Metric Cards / Trophy Counters -->
+<section class="w-full max-w-[1280px] mx-auto px-4 md:px-margin -mt-8 relative z-20">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Metric 1 -->
+<div class="bg-surface-container-lowest p-6 rounded-lg shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">military_tech</span>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-high text-primary font-label-md text-label-md font-bold">2024–2025</span>
+</div>
+<div class="mt-6">
+<div class="font-display-hero text-[44px] leading-tight text-primary font-extrabold">%98</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-1">Cambridge Başarısı</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">Starters, Movers, Flyers, KET ve PET seviyelerinde tam sertifika yeterliliği.</p>
+</div>
+<div class="mt-4 pt-4 bg-surface-container-low/60 rounded px-3 py-2 flex items-center gap-2 text-tertiary font-label-md text-label-md font-bold">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+          Cambridge Assessment Onaylı
+        </div>
+</div>
+<!-- Metric 2 -->
+<div class="bg-surface-container-lowest p-6 rounded-lg shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div class="w-12 h-12 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">groups</span>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-secondary-fixed-dim/40 text-on-secondary-fixed-variant font-label-md text-label-md font-bold">Bursa Geneli</span>
+</div>
+<div class="mt-6">
+<div class="font-display-hero text-[44px] leading-tight text-secondary font-extrabold">450+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-1">Mutlu Öğrenci</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">Nilüfer kampüsümüzde özgüvenle İngilizce konuşan genç mezun topluluğu.</p>
+</div>
+<div class="mt-4 pt-4 bg-surface-container-low/60 rounded px-3 py-2 flex items-center gap-2 text-secondary font-label-md text-label-md font-bold">
+<span class="material-symbols-outlined text-[16px]">sentiment_satisfied</span>
+          %99 Veli Tavsiye Oranı
+        </div>
+</div>
+<!-- Metric 3 -->
+<div class="bg-surface-container-lowest p-6 rounded-lg shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div class="w-12 h-12 rounded-full bg-tertiary-fixed flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">record_voice_over</span>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-tertiary-fixed/60 text-on-tertiary-fixed-variant font-label-md text-label-md font-bold">Aktif Metot</span>
+</div>
+<div class="mt-6">
+<div class="font-display-hero text-[44px] leading-tight text-tertiary font-extrabold">%94</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-1">Speaking Akıcılığı</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">Aktif konuşma odaklı yuvarlak masa ve simülasyon metodolojisiyle spontane telaffuz.</p>
+</div>
+<div class="mt-4 pt-4 bg-surface-container-low/60 rounded px-3 py-2 flex items-center gap-2 text-tertiary-container font-label-md text-label-md font-bold">
+<span class="material-symbols-outlined text-[16px]">forum</span>
+          Ezbersiz İletişim Gücü
+        </div>
+</div>
+<!-- Metric 4 -->
+<div class="bg-surface-container-lowest p-6 rounded-lg shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">domain_verification</span>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-md text-label-md font-bold">Akredite</span>
+</div>
+<div class="mt-6">
+<div class="font-display-hero text-[44px] leading-tight text-primary-container font-extrabold">25+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-1">Sınav Akreditasyonu</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">Uluslararası Cambridge Preparation Centre ve British Council partner protokolü.</p>
+</div>
+<div class="mt-4 pt-4 bg-surface-container-low/60 rounded px-3 py-2 flex items-center gap-2 text-primary font-label-md text-label-md font-bold">
+<span class="material-symbols-outlined text-[16px]">license</span>
+          Resmi Kayıt &amp; Hazırlık
+        </div>
+</div>
+</div>
+</section>
+<!-- Section 2: Cambridge Sınav Başarı Tablosu & Seviye Gurur Tablosu -->
+<section class="w-full max-w-[1280px] mx-auto px-4 md:px-margin py-16">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+<div>
+<span class="text-label-md font-label-md uppercase tracking-wider text-secondary font-bold">Resmi Seviye Performansı</span>
+<h2 class="text-headline-lg font-headline-lg text-on-surface mt-1">Cambridge İngilizce Seviye Gurur Tablosu</h2>
+<p class="text-body-md font-body-md text-on-surface-variant mt-2 max-w-2xl">
+          Genç dâhilerimizin CEFR (Avrupa Ortak Dil Çerçevesi) standartlarındaki resmi sınav skorları ve uluslararası tescilli başarı bantları.
+        </p>
+</div>
+<div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container text-primary font-label-lg text-label-lg shrink-0">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+        Tüm Skorlar Cambridge Tarafından Onaylıdır
+      </div>
+</div>
+<!-- Editorial Table Wrapper -->
+<div class="bg-surface-container-lowest rounded-lg shadow-lg overflow-hidden">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-high text-on-surface font-label-lg text-label-lg">
+<th class="py-4 px-6">Sınav / Seviye</th>
+<th class="py-4 px-6">Hedef Yaş Grubu</th>
+<th class="py-4 px-6">CEFR Seviyesi</th>
+<th class="py-4 px-6">Akademi Başarı Oranı</th>
+<th class="py-4 px-6">Kazanılan Sertifika &amp; Rozet</th>
+<th class="py-4 px-6 text-right">Durum</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container">
+<!-- Row 1: Starters -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-5 px-6">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<div>
+<div class="font-headline-sm text-body-lg font-bold text-on-surface">YLE Starters</div>
+<div class="text-body-sm font-body-sm text-on-surface-variant">Pre A1 Seviye Temeli</div>
+</div>
+</div>
+</td>
+<td class="py-5 px-6 text-body-md font-body-md text-on-surface-variant">7–8 Yaş (1. &amp; 2. Sınıf)</td>
+<td class="py-5 px-6"><span class="px-3 py-1 rounded-full bg-surface-container text-primary font-bold text-label-md font-label-md">Pre A1</span></td>
+<td class="py-5 px-6">
+<div class="flex items-center gap-2">
+<div class="w-24 bg-surface-container-highest rounded-full h-2 overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 100%;"></div>
+</div>
+<span class="font-label-lg text-label-lg font-bold text-primary">%100</span>
+</div>
+</td>
+<td class="py-5 px-6">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant text-label-md font-label-md font-bold">
+<span class="material-symbols-outlined text-[16px]">stars</span> 15/15 Kalkan Rozeti
+                </span>
+</td>
+<td class="py-5 px-6 text-right font-label-md text-label-md text-primary font-bold">Tam Başarı</td>
+</tr>
+<!-- Row 2: Movers -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-5 px-6">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">rocket_launch</span>
+</div>
+<div>
+<div class="font-headline-sm text-body-lg font-bold text-on-surface">YLE Movers</div>
+<div class="text-body-sm font-body-sm text-on-surface-variant">A1 İletişim Standardı</div>
+</div>
+</div>
+</td>
+<td class="py-5 px-6 text-body-md font-body-md text-on-surface-variant">9–10 Yaş (3. &amp; 4. Sınıf)</td>
+<td class="py-5 px-6"><span class="px-3 py-1 rounded-full bg-surface-container text-secondary font-bold text-label-md font-label-md">A1</span></td>
+<td class="py-5 px-6">
+<div class="flex items-center gap-2">
+<div class="w-24 bg-surface-container-highest rounded-full h-2 overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 98%;"></div>
+</div>
+<span class="font-label-lg text-label-lg font-bold text-secondary">%98.4</span>
+</div>
+</td>
+<td class="py-5 px-6">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-fixed-dim/50 text-on-secondary-fixed-variant text-label-md font-label-md font-bold">
+<span class="material-symbols-outlined text-[16px]">workspace_premium</span> Yüksek Başarı Belgesi
+                </span>
+</td>
+<td class="py-5 px-6 text-right font-label-md text-label-md text-secondary font-bold">Tescilli</td>
+</tr>
+<!-- Row 3: Flyers -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-5 px-6">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-tertiary-fixed flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">flight_takeoff</span>
+</div>
+<div>
+<div class="font-headline-sm text-body-lg font-bold text-on-surface">YLE Flyers</div>
+<div class="text-body-sm font-body-sm text-on-surface-variant">A2 İlköğretim Zirvesi</div>
+</div>
+</div>
+</td>
+<td class="py-5 px-6 text-body-md font-body-md text-on-surface-variant">11–12 Yaş (5. &amp; 6. Sınıf)</td>
+<td class="py-5 px-6"><span class="px-3 py-1 rounded-full bg-surface-container text-tertiary font-bold text-label-md font-label-md">A2</span></td>
+<td class="py-5 px-6">
+<div class="flex items-center gap-2">
+<div class="w-24 bg-surface-container-highest rounded-full h-2 overflow-hidden">
+<div class="bg-tertiary h-full rounded-full" style="width: 96%;"></div>
+</div>
+<span class="font-label-lg text-label-lg font-bold text-tertiary">%96.8</span>
+</div>
+</td>
+<td class="py-5 px-6">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant text-label-md font-label-md font-bold">
+<span class="material-symbols-outlined text-[16px]">military_tech</span> Cambridge Global A2 Pass
+                </span>
+</td>
+<td class="py-5 px-6 text-right font-label-md text-label-md text-tertiary font-bold">Tescilli</td>
+</tr>
+<!-- Row 4: KET & PET -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-5 px-6">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-fixed-dim flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">school</span>
+</div>
+<div>
+<div class="font-headline-sm text-body-lg font-bold text-on-surface">A2 Key &amp; B1 Preliminary (PET)</div>
+<div class="text-body-sm font-body-sm text-on-surface-variant">Ortaokul &amp; LGS Dil Yeterliliği</div>
+</div>
+</div>
+</td>
+<td class="py-5 px-6 text-body-md font-body-md text-on-surface-variant">12–14 Yaş (7. &amp; 8. Sınıf)</td>
+<td class="py-5 px-6"><span class="px-3 py-1 rounded-full bg-surface-container text-primary-container font-bold text-label-md font-label-md">A2 - B1</span></td>
+<td class="py-5 px-6">
+<div class="flex items-center gap-2">
+<div class="w-24 bg-surface-container-highest rounded-full h-2 overflow-hidden">
+<div class="bg-primary-container h-full rounded-full" style="width: 95%;"></div>
+</div>
+<span class="font-label-lg text-label-lg font-bold text-primary-container">%95.2</span>
+</div>
+</td>
+<td class="py-5 px-6">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-highest text-primary font-label-md text-label-md font-bold">
+<span class="material-symbols-outlined text-[16px]">verified</span> Merit &amp; Distinction Onayı
+                </span>
+</td>
+<td class="py-5 px-6 text-right font-label-md text-label-md text-primary font-bold">Tescilli</td>
+</tr>
+<!-- Row 5: IELTS & Yurtdışı -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-5 px-6">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">public</span>
+</div>
+<div>
+<div class="font-headline-sm text-body-lg font-bold text-on-surface">IELTS &amp; B2 First (FCE)</div>
+<div class="text-body-sm font-body-sm text-on-surface-variant">Lise ve Uluslararası Üniversite Kabulü</div>
+</div>
+</div>
+</td>
+<td class="py-5 px-6 text-body-md font-body-md text-on-surface-variant">15–18 Yaş (Lise Grupları)</td>
+<td class="py-5 px-6"><span class="px-3 py-1 rounded-full bg-surface-container text-secondary font-bold text-label-md font-label-md">B2 - C1</span></td>
+<td class="py-5 px-6">
+<div class="flex items-center gap-2">
+<div class="w-24 bg-surface-container-highest rounded-full h-2 overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 92%;"></div>
+</div>
+<span class="font-label-lg text-label-lg font-bold text-secondary">%92.0</span>
+</div>
+</td>
+<td class="py-5 px-6">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed text-label-md font-label-md font-bold">
+<span class="material-symbols-outlined text-[16px]">emoji_events</span> Ortalama 7.0 Band Skoru
+                </span>
+</td>
+<td class="py-5 px-6 text-right font-label-md text-label-md text-secondary font-bold">Tescilli</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<!-- Section 3: Onaylı Veli & Öğrenci Görüşleri (Filterable) -->
+<section class="w-full bg-surface-container-low py-16">
+<div class="max-w-[1280px] mx-auto px-4 md:px-margin">
+<div class="text-center max-w-3xl mx-auto mb-10">
+<span class="text-label-md font-label-md uppercase tracking-wider text-secondary font-bold">Gerçek Deneyimler</span>
+<h2 class="text-headline-lg font-headline-lg text-on-surface mt-1">Velilerimizin ve Öğrencilerimizin Kaleminden</h2>
+<p class="text-body-md font-body-md text-on-surface-variant mt-2">
+          Nilüfer'deki akademimizde dil bariyerini aşan, okul derslerinde birinci olan ve uluslararası sınavlarda dereceye giren ailelerimizin paylaşımları.
+        </p>
+<!-- Filter Pills -->
+<div class="flex flex-wrap items-center justify-center gap-2 mt-8" id="testimonials-filter-group">
+<button class="filter-btn px-5 py-2 rounded-full font-label-lg text-label-lg bg-primary text-on-primary transition-all shadow-sm" data-filter="all">
+            Tümü
+          </button>
+<button class="filter-btn px-5 py-2 rounded-full font-label-lg text-label-lg bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container transition-all" data-filter="yle">
+            İlkokul / Cambridge YLE
+          </button>
+<button class="filter-btn px-5 py-2 rounded-full font-label-lg text-label-lg bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container transition-all" data-filter="lgs">
+            Ortaokul / LGS &amp; Speaking
+          </button>
+<button class="filter-btn px-5 py-2 rounded-full font-label-lg text-label-lg bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container transition-all" data-filter="lise">
+            Lise &amp; Yurtdışı Hazırlık
+          </button>
+</div>
+</div>
+<!-- Testimonials Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="testimonials-grid">
+<!-- Card 1 (YLE) -->
+<div class="testimonial-card yle bg-surface-container-lowest p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-4">
+<div class="flex text-tertiary-container">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="px-3 py-1 rounded-full bg-primary-fixed text-primary font-label-md text-label-md font-bold">Movers 15 Kalkan</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+              “Kızımız Zeynep 3. sınıfta W Language Academy'ye başladı. Daha önce yabancı dil derslerinden çekinirken, buradaki interaktif yuvarlak masa dersleri sayesinde Cambridge Movers sınavında 15 kalkan alarak tam puan elde etti. Artık evde kendi kendine İngilizce şarkılar söylüyor!”
+            </p>
+</div>
+<div class="mt-6 pt-4 bg-surface-container-low/40 rounded px-4 py-3">
+<div class="flex items-center justify-between">
+<div>
+<h4 class="font-headline-sm text-body-lg font-bold text-on-surface">Dr. Ayşe Yılmaz</h4>
+<p class="font-body-sm text-body-sm text-secondary">Zeynep Yılmaz'ın Annesi (4. Sınıf)</p>
+</div>
+<div class="text-right">
+<span class="text-label-md font-label-md text-outline">Bursa Nilüfer Koleji</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 2 (LGS) -->
+<div class="testimonial-card lgs bg-surface-container-lowest p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-4">
+<div class="flex text-tertiary-container">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="px-3 py-1 rounded-full bg-secondary-fixed text-secondary font-label-md text-label-md font-bold">LGS 10/10 Full Net</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+              “Oğlumuz Emre için LGS hazırlığında İngilizce'yi sadece sınav odaklı değil, kalıcı bir beceriye dönüştüren kurum bulmak zorundaydık. W Language sayesinde hem LGS İngilizce sorularının tamamını doğru yaptı hem de B1 Preliminary konuşma testinde Distinction kazandı.”
+            </p>
+</div>
+<div class="mt-6 pt-4 bg-surface-container-low/40 rounded px-4 py-3">
+<div class="flex items-center justify-between">
+<div>
+<h4 class="font-headline-sm text-body-lg font-bold text-on-surface">Murat Kaya</h4>
+<p class="font-body-sm text-body-sm text-secondary">Emre Kaya'nın Babası (8. Sınıf)</p>
+</div>
+<div class="text-right">
+<span class="text-label-md font-label-md text-outline">Nilüfer Şahinkaya Koleji</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 3 (Lise) -->
+<div class="testimonial-card lise bg-surface-container-lowest p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-4">
+<div class="flex text-tertiary-container">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="px-3 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-md text-label-md font-bold">IELTS 7.5 Skoru</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+              “Hollanda'daki üniversite başvurum için IELTS Academic sınavına W Academy mentörleriyle hazırlandım. Akademik yazma ve akıcı mülakat simülasyonları beni ilk girişimde 7.5 skoru ile kabul alma noktasına taşıdı. Emeği geçen tüm eğitmen kadrosuna sonsuz teşekkürler.”
+            </p>
+</div>
+<div class="mt-6 pt-4 bg-surface-container-low/40 rounded px-4 py-3">
+<div class="flex items-center justify-between">
+<div>
+<h4 class="font-headline-sm text-body-lg font-bold text-on-surface">Defne Karahan</h4>
+<p class="font-body-sm text-body-sm text-secondary">Öğrenci (12. Sınıf Mezun)</p>
+</div>
+<div class="text-right">
+<span class="text-label-md font-label-md text-outline">Bursa Anadolu Lisesi</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 4 (YLE) -->
+<div class="testimonial-card yle bg-surface-container-lowest p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-4">
+<div class="flex text-tertiary-container">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="px-3 py-1 rounded-full bg-primary-fixed text-primary font-label-md text-label-md font-bold">Flyers Yüksek Onur</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+              “Öğretmenlerin bireysel takibi ve her hafta bize iletilen detaylı gelişim raporları veli olarak içimizi çok rahatlatıyor. Can, Flyers sınavında hiç stres yaşamadan en yüksek kalkan sayısına ulaştı. Kurumun sıcaklığı ve disiplini mükemmel harmanlanmış.”
+            </p>
+</div>
+<div class="mt-6 pt-4 bg-surface-container-low/40 rounded px-4 py-3">
+<div class="flex items-center justify-between">
+<div>
+<h4 class="font-headline-sm text-body-lg font-bold text-on-surface">Selin &amp; Barış Öztürk</h4>
+<p class="font-body-sm text-body-sm text-secondary">Can Öztürk'ün Velisi (5. Sınıf)</p>
+</div>
+<div class="text-right">
+<span class="text-label-md font-label-md text-outline">TED Bursa Koleji</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 5 (LGS) -->
+<div class="testimonial-card lgs bg-surface-container-lowest p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-4">
+<div class="flex text-tertiary-container">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="px-3 py-1 rounded-full bg-secondary-fixed text-secondary font-label-md text-label-md font-bold">B1 Konuşma Özgüveni</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+              “Ortaokul çağında çocukların İngilizce konuşmaktan utanma refleksini W Language Academy'nin samimi atmosferi tamamen yıktı. Kızım Yağmur, artık yabancı turistlerle rahatça yol tarifi yapabiliyor, okulundaki münazara kulübünde İngilizce sunumlar yapıyor.”
+            </p>
+</div>
+<div class="mt-6 pt-4 bg-surface-container-low/40 rounded px-4 py-3">
+<div class="flex items-center justify-between">
+<div>
+<h4 class="font-headline-sm text-body-lg font-bold text-on-surface">Bahar Demir</h4>
+<p class="font-body-sm text-body-sm text-secondary">Yağmur Demir'in Annesi (7. Sınıf)</p>
+</div>
+<div class="text-right">
+<span class="text-label-md font-label-md text-outline">Özel Çakır Okulları</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 6 (Lise) -->
+<div class="testimonial-card lise bg-surface-container-lowest p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-4">
+<div class="flex text-tertiary-container">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="px-3 py-1 rounded-full bg-surface-container text-primary font-label-md text-label-md font-bold">C1 Advanced Pass</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+              “Lise hazırlık sınıfında katıldığım CAE C1 Advanced grubu ufkumu genişletti. Kelime haznem sadece test İngilizcesi değil, akademik makale yazacak ve küresel projeleri savunacak seviyeye ulaştı. Bursa'da bu derinlikte eğitim veren başka bir kurum yok.”
+            </p>
+</div>
+<div class="mt-6 pt-4 bg-surface-container-low/40 rounded px-4 py-3">
+<div class="flex items-center justify-between">
+<div>
+<h4 class="font-headline-sm text-body-lg font-bold text-on-surface">Kerem Aydın</h4>
+<p class="font-body-sm text-body-sm text-secondary">Öğrenci (11. Sınıf)</p>
+</div>
+<div class="text-right">
+<span class="text-label-md font-label-md text-outline">Tofaş Fen Lisesi</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 4: 'Deneyimini Paylaş' Bölümü (Veli Görüşü İletim Formu) -->
+<section class="w-full max-w-[1280px] mx-auto px-4 md:px-margin py-16">
+<div class="bg-surface-container rounded-xl p-8 md:p-12 relative overflow-hidden shadow-xl">
+<!-- Background SVG Accent Shapes -->
+<svg class="absolute -right-16 -bottom-16 w-80 h-80 text-surface-container-highest/40 pointer-events-none" fill="currentColor" viewbox="0 0 200 200">
+<path d="M45.7,-64.5C59.2,-54.6,70.2,-41.8,75.7,-26.8C81.2,-11.9,81.1,5.2,75.6,20.4C70.1,35.6,59.2,48.9,45.8,59C32.4,69.1,16.2,76,-0.7,77C-17.7,78,-35.3,73.1,-48.7,62.8C-62.1,52.5,-71.2,36.8,-76.3,19.8C-81.4,2.8,-82.5,-15.5,-75.9,-30.7C-69.3,-45.8,-55.1,-57.8,-40.3,-67.2C-25.5,-76.5,-12.8,-83.1,1.4,-85C15.5,-87,32.2,-74.4,45.7,-64.5Z" transform="translate(100 100)"></path>
+</svg>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 relative z-10">
+<!-- Form Left Info -->
+<div class="lg:col-span-5 flex flex-col justify-between">
+<div>
+<span class="text-label-md font-label-md uppercase tracking-wider text-secondary font-bold">Topluluğumuza Katkı Verin</span>
+<h2 class="text-headline-lg font-headline-lg text-on-surface mt-2 leading-tight">
+              Siz de Deneyiminizi Paylaşın
+            </h2>
+<p class="text-body-md font-body-md text-on-surface-variant mt-4">
+              Çocuğunuzun W Language Academy ile geçirdiği öğrenme sürecini, derslerdeki gelişimini ve sınav başarılarını paylaşarak yeni velilerimize ışık tutun.
+            </p>
+<div class="mt-8 space-y-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-primary-fixed text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">security</span>
+</div>
+<span class="text-body-sm font-body-sm text-on-surface">Yorumlar onay sürecinden sonra doğrulanmış olarak yayınlanır.</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</div>
+<span class="text-body-sm font-body-sm text-on-surface">Öğrenci gizliliği esastır, dilediğiniz bilgiyi anonim tutabilirsiniz.</span>
+</div>
+</div>
+</div>
+<div class="mt-8 pt-6 bg-surface-container-lowest/60 rounded-lg p-4">
+<span class="font-label-md text-label-md text-secondary uppercase font-bold">Danışmanlık Desteği</span>
+<p class="font-body-sm text-body-sm text-on-surface mt-1">Öğrenci danışmanlarımız her zaman bir mesaj uzağınızda: <strong>wlanguageacademy@gmail.com</strong></p>
+</div>
+</div>
+<!-- Form Right Container -->
+<div class="lg:col-span-7 bg-surface-container-lowest p-6 md:p-8 rounded-lg shadow-md">
+<form class="space-y-4" id="feedback-form" onsubmit="event.preventDefault(); submitFeedback();">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div>
+<label class="block text-label-md font-label-md text-on-surface mb-1.5">Veli Adı Soyadı *</label>
+<input class="w-full px-4 py-3 rounded-full bg-surface-container-low text-on-surface placeholder:text-outline-variant focus:outline-none focus:bg-surface-container-lowest focus:shadow-md transition-all text-body-md font-body-md" placeholder="Örn: Av. Selin Arslan" required="" type="text"/>
+</div>
+<div>
+<label class="block text-label-md font-label-md text-on-surface mb-1.5">Öğrenci Adı &amp; Yaş Grubu *</label>
+<input class="w-full px-4 py-3 rounded-full bg-surface-container-low text-on-surface placeholder:text-outline-variant focus:outline-none focus:bg-surface-container-lowest focus:shadow-md transition-all text-body-md font-body-md" placeholder="Örn: Efe Arslan (5. Sınıf / Flyers)" required="" type="text"/>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div>
+<label class="block text-label-md font-label-md text-on-surface mb-1.5">Öğrencinin Okulu (İsteğe Bağlı)</label>
+<input class="w-full px-4 py-3 rounded-full bg-surface-container-low text-on-surface placeholder:text-outline-variant focus:outline-none focus:bg-surface-container-lowest focus:shadow-md transition-all text-body-md font-body-md" placeholder="Örn: Emine Örnek Koleji" type="text"/>
+</div>
+<div>
+<label class="block text-label-md font-label-md text-on-surface mb-1.5">Değerlendirme Puanı</label>
+<div class="flex items-center gap-2 pt-2 text-tertiary-container" id="star-rating">
+<button class="star-btn focus:outline-none" onclick="setRating(1)" type="button"><span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">star</span></button>
+<button class="star-btn focus:outline-none" onclick="setRating(2)" type="button"><span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">star</span></button>
+<button class="star-btn focus:outline-none" onclick="setRating(3)" type="button"><span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">star</span></button>
+<button class="star-btn focus:outline-none" onclick="setRating(4)" type="button"><span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">star</span></button>
+<button class="star-btn focus:outline-none" onclick="setRating(5)" type="button"><span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">star</span></button>
+<span class="text-label-md font-label-md text-on-surface-variant ml-2 font-bold" id="rating-label">5.0 / 5.0 Mükemmel</span>
+</div>
+</div>
+</div>
+<div>
+<label class="block text-label-md font-label-md text-on-surface mb-1.5">Deneyiminiz &amp; Yorumunuz *</label>
+<textarea class="w-full px-4 py-3 rounded-lg bg-surface-container-low text-on-surface placeholder:text-outline-variant focus:outline-none focus:bg-surface-container-lowest focus:shadow-md transition-all text-body-md font-body-md resize-none" placeholder="W Language Academy eğitim metodolojisi, öğretmen ilgisi ve çocuğunuzdaki konuşma gelişimi hakkında neler söylersiniz?" required="" rows="4"></textarea>
+</div>
+<div class="flex items-center justify-between pt-2">
+<label class="flex items-center gap-2 text-body-sm font-body-sm text-on-surface-variant cursor-pointer">
+<input class="w-4 h-4 rounded text-primary focus:ring-0 cursor-pointer" required="" type="checkbox"/>
+<span>Görüşümün web sitesinde yayınlanmasını onaylıyorum.</span>
+</label>
+<button class="px-8 py-3 rounded-full bg-primary hover:bg-inverse-surface text-on-primary font-label-lg text-label-lg shadow-lg hover:-translate-y-0.5 transition-all inline-flex items-center gap-2 cursor-pointer" type="submit">
+<span>Görüşü Gönder</span>
+<span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+</div>
+<div class="hidden p-4 rounded-lg bg-surface-container-high text-primary font-body-sm text-body-sm mt-3 flex items-center gap-2" id="form-success-msg">
+<span class="material-symbols-outlined text-[20px]">check_circle</span>
+              Teşekkür ederiz! Değerli görüşünüz editör onayının ardından sayfada yerini alacaktır.
+            </div>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 5: Yurtdışı Yaz Okulu & Dil Kampı Başarıları -->
+<section class="w-full max-w-[1280px] mx-auto px-4 md:px-margin py-16">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+<div>
+<span class="text-label-md font-label-md uppercase tracking-wider text-secondary font-bold">Global Perspektif</span>
+<h2 class="text-headline-lg font-headline-lg text-on-surface mt-1">İngiltere Yaz Okulu &amp; Dil Kampı Deneyimleri</h2>
+<p class="text-body-md font-body-md text-on-surface-variant mt-2 max-w-2xl">
+          Öğrencilerimiz Londra ve Oxford kampüslerindeki uluslararası ortamlarda İngilizceyi anavatanında yaşayarak pekiştiriyor.
+        </p>
+</div>
+<div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-lg text-label-lg shrink-0">
+<span class="material-symbols-outlined text-[18px]">flight</span>
+        London &amp; Oxford Programları
+      </div>
+</div>
+<!-- Editorial Camp Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Camp Experience 1: Oxford -->
+<div class="bg-surface-container-low p-8 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-center justify-between mb-6">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-headline-sm">
+              OX
+            </div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Oxford St. Clare's Dil Kampı</h3>
+<p class="font-body-sm text-body-sm text-secondary">2 Haftalık Yoğun İletişim &amp; STEM Atölyesi</p>
+</div>
+</div>
+<span class="px-3 py-1 rounded-full bg-surface-container-highest text-primary font-label-md text-label-md font-bold">12–16 Yaş</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed mb-6">
+          “Oxford kampında 18 farklı ülkeden gelen akranlarıyla bir arada kalan öğrencilerimiz, ilk günden itibaren İngilizceyi tek iletişim dili olarak kullandı. Ders sonu münazara yarışmasında Türk heyetimiz ikincilik ödülü kazanarak akademi tarihimize geçti.”
+        </p>
+<!-- Dil Edinim Raporu Badge Panel -->
+<div class="bg-surface-container-lowest p-4 rounded-lg space-y-3">
+<div class="text-label-md font-label-md uppercase tracking-wider text-primary font-bold">Edinim Raporu &amp; Çıktılar</div>
+<div class="grid grid-cols-3 gap-2 text-center">
+<div class="p-2 bg-surface-container-low rounded">
+<div class="font-headline-sm text-body-lg font-bold text-primary">+%40</div>
+<div class="text-[11px] text-on-surface-variant font-bold">Spontane Konuşma</div>
+</div>
+<div class="p-2 bg-surface-container-low rounded">
+<div class="font-headline-sm text-body-lg font-bold text-secondary">60+ Saat</div>
+<div class="text-[11px] text-on-surface-variant font-bold">Native Etkileşim</div>
+</div>
+<div class="p-2 bg-surface-container-low rounded">
+<div class="font-headline-sm text-body-lg font-bold text-tertiary">CEFR B2</div>
+<div class="text-[11px] text-on-surface-variant font-bold">Kazanılan Seviye</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex items-center justify-between text-body-sm font-body-sm text-on-surface-variant">
+<span class="flex items-center gap-1 font-bold text-primary">
+<span class="material-symbols-outlined text-[16px]">location_on</span> Oxford, Birleşik Krallık
+          </span>
+<span>W Language Academy Kafile Rehberliği</span>
+</div>
+</div>
+<!-- Camp Experience 2: London -->
+<div class="bg-surface-container-low p-8 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-center justify-between mb-6">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-bold text-headline-sm">
+              LD
+            </div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Londra Kültür &amp; Liderlik Kampı</h3>
+<p class="font-body-sm text-body-sm text-secondary">Brunel University Campus &amp; British Museum</p>
+</div>
+</div>
+<span class="px-3 py-1 rounded-full bg-surface-container-highest text-secondary font-label-md text-label-md font-bold">14–18 Yaş</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed mb-6">
+          “Londra yaz okulumuzda gençlerimiz British Council akrediteli eğitmenlerden ders alırken; British Library ve Science Museum projeleriyle akademik araştırma dilini sahada uyguladı. Dönüşte okul mülakatlarında gösterdikleri özgüven fark yarattı.”
+        </p>
+<!-- Dil Edinim Raporu Badge Panel -->
+<div class="bg-surface-container-lowest p-4 rounded-lg space-y-3">
+<div class="text-label-md font-label-md uppercase tracking-wider text-secondary font-bold">Edinim Raporu &amp; Çıktılar</div>
+<div class="grid grid-cols-3 gap-2 text-center">
+<div class="p-2 bg-surface-container-low rounded">
+<div class="font-headline-sm text-body-lg font-bold text-secondary">+%45</div>
+<div class="text-[11px] text-on-surface-variant font-bold">Akademik Kelime</div>
+</div>
+<div class="p-2 bg-surface-container-low rounded">
+<div class="font-headline-sm text-body-lg font-bold text-primary">12 Proje</div>
+<div class="text-[11px] text-on-surface-variant font-bold">Sunum Deneyimi</div>
+</div>
+<div class="p-2 bg-surface-container-low rounded">
+<div class="font-headline-sm text-body-lg font-bold text-tertiary">Trinity GESE</div>
+<div class="text-[11px] text-on-surface-variant font-bold">Uluslararası Rozet</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex items-center justify-between text-body-sm font-body-sm text-on-surface-variant">
+<span class="flex items-center gap-1 font-bold text-secondary">
+<span class="material-symbols-outlined text-[16px]">location_on</span> Londra, Birleşik Krallık
+          </span>
+<span>W Language Academy Kafile Rehberliği</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 6: High-Impact Call to Action Card -->
+<section class="w-full max-w-[1280px] mx-auto px-4 md:px-margin py-12 mb-12">
+<div class="bg-gradient-to-r from-primary to-inverse-surface text-on-primary rounded-xl p-8 md:p-14 shadow-2xl relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8">
+<!-- Decorative background rings -->
+<div class="absolute -right-20 -top-20 w-80 h-80 rounded-full border border-white/10 pointer-events-none"></div>
+<div class="absolute -right-10 -top-10 w-60 h-60 rounded-full border border-white/20 pointer-events-none"></div>
+<div class="max-w-2xl relative z-10 text-center md:text-left">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/20 text-white font-label-md text-label-md uppercase tracking-wider mb-4 backdrop-blur-sm">
+<span class="material-symbols-outlined text-[16px]">campaign</span>
+          Yeni Dönem Kayıtları Başladı
+        </div>
+<h2 class="text-headline-lg font-headline-lg text-white font-extrabold leading-tight">
+          Çocuğunuzun Başarı Yolculuğunu Birlikte Başlatalım
+        </h2>
+<p class="text-body-lg font-body-lg text-primary-fixed mt-3 leading-relaxed">
+          Uzman eğitmenlerimiz eşliğinde ücretsiz 1-e-1 seviye tespiti yapalım, çocuğunuza en uygun Cambridge hazırlık ve konuşma kulübü planını birlikte oluşturalım.
+        </p>
+</div>
+<div class="flex flex-col sm:flex-row items-center gap-4 relative z-10 shrink-0">
+<a class="px-8 py-4 rounded-full bg-surface-container-lowest text-primary hover:bg-primary-fixed font-label-lg text-label-lg shadow-xl hover:scale-105 active:scale-95 transition-all inline-flex items-center gap-2 font-bold cursor-pointer" href="index.html#on-kayit">
+<span>Ücretsiz Seviye Tespiti &amp; Randevu</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+<a class="px-6 py-4 rounded-full bg-white/10 hover:bg-white/20 text-white font-label-lg text-label-lg backdrop-blur-sm transition-all inline-flex items-center gap-2 font-bold" href="https://wa.me/905444737693" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+          WhatsApp Danışma
+        </a>
+</div>
+</div>
+</section>
+</div>
+<script>
+  // Filter Functionality for Testimonials
+  const filterBtns = document.querySelectorAll('#testimonials-filter-group .filter-btn');
+  const cards = document.querySelectorAll('#testimonials-grid .testimonial-card');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      // Toggle active styling
+      filterBtns.forEach(b => {
+        b.classList.remove('bg-primary', 'text-on-primary', 'shadow-sm');
+        b.classList.add('bg-surface-container-lowest', 'text-on-surface-variant');
+      });
+      btn.classList.add('bg-primary', 'text-on-primary', 'shadow-sm');
+      btn.classList.remove('bg-surface-container-lowest', 'text-on-surface-variant');
+
+      const filterValue = btn.getAttribute('data-filter');
+      cards.forEach(card => {
+        if (filterValue === 'all' || card.classList.contains(filterValue)) {
+          card.classList.remove('hidden');
+          card.classList.add('flex');
+        } else {
+          card.classList.add('hidden');
+          card.classList.remove('flex');
+        }
+      });
+    });
+  });
+
+  // Star Rating Interaction
+  let currentRating = 5;
+  function setRating(rating) {
+    currentRating = rating;
+    const stars = document.querySelectorAll('#star-rating .star-btn span');
+    const label = document.getElementById('rating-label');
+    stars.forEach((star, index) => {
+      if (index < rating) {
+        star.style.fontVariationSettings = "'FILL' 1";
+      } else {
+        star.style.fontVariationSettings = "'FILL' 0";
+      }
+    });
+    const labels = [
+      '1.0 / 5.0 Geliştirilmeli',
+      '2.0 / 5.0 Orta',
+      '3.0 / 5.0 İyi',
+      '4.0 / 5.0 Çok Başarılı',
+      '5.0 / 5.0 Mükemmel'
+    ];
+    label.textContent = labels[rating - 1];
+  }
+
+  // Simple feedback submission feedback
+  function submitFeedback() {
+    const successMsg = document.getElementById('form-success-msg');
+    const form = document.getElementById('feedback-form');
+    successMsg.classList.remove('hidden');
+    form.reset();
+    setRating(5);
+    setTimeout(() => {
+      successMsg.classList.add('hidden');
+    }, 6000);
+  }
+</script></main><footer class="w-full relative bg-inverse-surface text-inverse-on-surface overflow-hidden pt-space-2xl pb-space-xl mt-space-3xl"><div class="absolute top-0 left-0 right-0 h-8 bg-surface rounded-b-[40px]"></div><div class="max-w-[1280px] mx-auto px-margin pt-space-xl"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-2xl pb-space-2xl"><div class="flex flex-col gap-space-md"><div class="flex items-center gap-space-sm"><div class="p-space-xs bg-surface-container-lowest rounded-full inline-flex"><img alt="W Language Academy Logo" class="w-10 h-10 rounded-full object-cover" src="images/logo-kids.png"/></div><span class="font-headline-sm text-headline-sm text-inverse-on-surface font-bold">W Language Academy</span></div><p class="font-accent-script-highlight text-body-lg text-secondary-fixed-dim italic leading-snug">Learn · Speak · Grow</p><p class="font-body-sm text-body-sm text-outline-variant">Your Language Partner! Çocuklar ve gençler için yenilikçi, neşeli ve iletişim odaklı dil öğrenme yolculuğu.</p></div><div class="flex flex-col gap-space-md"><span class="font-label-lg text-label-lg text-tertiary-fixed tracking-wider uppercase font-bold">Hızlı Bağlantılar</span><ul class="flex flex-col gap-space-sm"><li class="leading-none"><a class="font-body-sm text-body-sm text-outline-variant hover:text-surface-container-lowest transition-colors" data-path="anasayfa" href="#anasayfa">Anasayfa</a></li><li class="leading-none"><a class="font-body-sm text-body-sm text-outline-variant hover:text-surface-container-lowest transition-colors" data-path="hakkimizda" href="hakkimizda.html">Hakkımızda</a></li><li class="leading-none"><a class="font-body-sm text-body-sm text-outline-variant hover:text-surface-container-lowest transition-colors" data-path="programlar" href="programlar.html">Programlar</a></li><li class="leading-none"><a class="font-body-sm text-body-sm text-outline-variant hover:text-surface-container-lowest transition-colors" data-path="nasil-calisiyoruz" href="nasil-calisiyoruz.html">Nasıl Çalışıyoruz</a></li><li class="leading-none"><a class="font-body-sm text-body-sm text-outline-variant hover:text-surface-container-lowest transition-colors" data-path="basarilar" href="basarilar.html">Başarı Hikayeleri</a></li><li class="leading-none"><a class="font-body-sm text-body-sm text-outline-variant hover:text-surface-container-lowest transition-colors" data-path="duyurular" href="duyurular.html">Duyurular &amp; Etkinlikler</a></li><li class="leading-none"><a class="font-body-sm text-body-sm text-outline-variant hover:text-surface-container-lowest transition-colors" data-path="iletisim" href="iletisim.html">İletişim</a></li></ul></div><div class="flex flex-col gap-space-md"><span class="font-label-lg text-label-lg text-tertiary-fixed tracking-wider uppercase font-bold">Yasal &amp; Güvenlik</span><ul class="flex flex-col gap-space-sm"><li class="leading-none"><a class="font-body-sm text-body-sm text-outline-variant hover:text-surface-container-lowest transition-colors" data-path="kullanim-kosullari" href="#">Kullanım Koşulları</a></li><li class="leading-none"><a class="font-body-sm text-body-sm text-outline-variant hover:text-surface-container-lowest transition-colors" data-path="gizlilik-ve-aydinlatma-metni" href="#">Gizlilik ve Aydınlatma Metni</a></li><li class="leading-none"><a class="font-body-sm text-body-sm text-outline-variant hover:text-surface-container-lowest transition-colors" data-path="cerez-bildirimi" href="#">Çerez Bildirimi</a></li><li class="leading-none"><a class="font-body-sm text-body-sm text-outline-variant hover:text-surface-container-lowest transition-colors" data-path="acik-riza-metni" href="#">Açık Rıza Metni</a></li></ul></div><div class="flex flex-col gap-space-md"><span class="font-label-lg text-label-lg text-tertiary-fixed tracking-wider uppercase font-bold">Bize Ulaşın</span><p class="font-body-sm text-body-sm text-outline-variant">Sorularınız ve erken kayıt avantajları için hemen bir danışmanımızla görüşün.</p><div class="flex items-center gap-space-sm pt-space-xs"><a aria-label="Instagram" class="w-10 h-10 rounded-full bg-secondary/30 flex items-center justify-center hover:bg-secondary-container hover:text-on-secondary-container transition-all hover:scale-110" href="https://www.instagram.com/wlanguageacademy/" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-[20px]">photo_camera</span></a><a aria-label="E-posta" class="w-10 h-10 rounded-full bg-secondary/30 flex items-center justify-center hover:bg-secondary-container hover:text-on-secondary-container transition-all hover:scale-110" href="mailto:wlanguageacademy@gmail.com"><span class="material-symbols-outlined text-[20px]">mail</span></a><a aria-label="Telefon" class="w-10 h-10 rounded-full bg-secondary/30 flex items-center justify-center hover:bg-secondary-container hover:text-on-secondary-container transition-all hover:scale-110" href="tel:05444737693"><span class="material-symbols-outlined text-[20px]">call</span></a></div></div></div><div class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md"><span class="font-body-sm text-body-sm text-outline-variant text-center md:text-left">© 2026 W Language Academy. Tüm hakları saklıdır.</span><div class="flex items-center gap-space-xs"><span class="font-label-md text-label-md px-space-md py-space-xs bg-surface-container-highest/20 rounded-full text-secondary-fixed">English &amp; Global Languages</span></div></div></div></footer><aside aria-label="Hızlı İletişim Kanalları" class="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3"><div class="flex items-center gap-space-xs group"><span class="hidden sm:inline-flex items-center px-space-md py-1.5 rounded-full bg-surface-container-lowest/95 backdrop-blur-md shadow-lg text-on-surface font-label-md text-label-md font-bold transition-all duration-300 opacity-90 group-hover:opacity-100 group-hover:scale-105 pointer-events-none border border-surface-container-high">Instagram'da Takip Edin</span><a aria-label="Instagram ile İletişime Geç" class="w-12 h-12 rounded-full flex items-center justify-center shadow-xl transition-all duration-300 hover:scale-110 active:scale-95 text-white bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7]" href="https://www.instagram.com/wlanguageacademy/" rel="noopener noreferrer" target="_blank"><svg class="w-6 h-6 fill-current drop-shadow-sm" viewbox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg></a></div><div class="flex items-center gap-space-xs group"><span class="hidden sm:inline-flex items-center px-space-md py-1.5 rounded-full bg-surface-container-lowest/95 backdrop-blur-md shadow-xl text-on-surface font-label-md text-label-md font-bold transition-all duration-300 opacity-90 group-hover:opacity-100 group-hover:scale-105 pointer-events-none border border-surface-container-high"><span class="w-2 h-2 rounded-full bg-[#25D366] mr-2 animate-ping"></span>WhatsApp ile İletişime Geç</span><a aria-label="WhatsApp ile İletişime Geç" class="relative w-14 h-14 rounded-full flex items-center justify-center shadow-2xl transition-all duration-300 hover:scale-110 active:scale-95 bg-[#25D366] text-white" href="https://wa.me/905444737693" rel="noopener noreferrer" target="_blank"><span class="absolute inset-0 rounded-full animate-ping opacity-30 pointer-events-none bg-[#25D366]"></span><svg class="w-8 h-8 fill-current drop-shadow-sm" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.81 13.47 3.81 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.53 7.34C9.36 7.34 9.09 7.4 8.87 7.65C8.64 7.89 8 8.49 8 9.72C8 10.95 8.89 12.14 9.02 12.3C9.14 12.47 10.77 14.97 13.25 16.05C13.84 16.31 14.3 16.46 14.66 16.57C15.26 16.76 15.79 16.74 16.22 16.67C16.7 16.6 17.7 16.07 17.91 15.49C18.12 14.9 18.12 14.4 18.06 14.3C18 14.2 17.84 14.13 17.6 14.02C17.36 13.9 16.17 13.31 15.95 13.23C15.73 13.15 15.57 13.11 15.4 13.35C15.24 13.6 14.76 14.16 14.61 14.33C14.47 14.5 14.32 14.52 14.08 14.4C13.84 14.28 12.87 13.96 11.72 12.93C10.82 12.13 10.22 11.14 10.1 10.93C9.97 10.73 10.08 10.61 10.2 10.49C10.31 10.38 10.45 10.2 10.57 10.06C10.69 9.92 10.73 9.82 10.81 9.66C10.89 9.5 10.85 9.35 10.79 9.23C10.73 9.11 10.24 7.92 10.04 7.43C9.84 6.95 9.64 7.02 9.49 7.02C9.35 7.01 9.53 7.34 9.53 7.34Z"></path></svg></a></div></aside><script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const reveals = document.querySelectorAll('.reveal-init');
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('reveal-visible');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, {
+      root: null,
+      threshold: 0.12,
+      rootMargin: '0px 0px -40px 0px'
+    });
+    reveals.forEach(el => observer.observe(el));
+  });
+</script></body></html>
